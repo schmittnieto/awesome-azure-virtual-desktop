@@ -1,4 +1,3 @@
-![Awesome Azure Virtual Desktop](/img/awesome_azure_virtual_desktop.png)
 # Awesome Azure Virtual Desktop
 
 A curated list of links and resources for **Azure Virtual Desktop** and its related technologies. Inspired by [Awesome Azure Architecture](https://aka.ms/AwesomeAzureArchitecture), which follows a similar model for Azure architecture links, this repository centralizes knowledge for professionals deploying or managing cloud-hosted virtual desktops and remote applications.
@@ -33,7 +32,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
   - [Blog](#blog)
   - [LinkedIn](#linkedin)
   - [YouTube](#youtube)
-  - [Github Repos and Tools](#github-repos-and-tools)
+  - [GitHub Repos and Tools](#github-repos-and-tools)
   - [Chats and Channels](#chats-and-channels)
   - [Trainings](#trainings)
   - [Events](#events)
@@ -51,23 +50,29 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### Autoscale and Host Pool Management
 - **Autoscale for personal host pools** *(Preview: July 2023; GA: November 2023)* - enabling power-off policies and scheduled scaling for assigned desktops to reduce idle compute costs.
-- **Session host configuration and update** *(Preview: November 2024)* - providing centralized control over OS image, agent version and extension settings across host pools, removing the need for manual session host redeployment.
+- **Session host configuration and update** *(Preview: November 2024; session host creation expansion: June 2025)* - defining VM disk type, operating system image and related session host properties for pooled host pools, then rolling out changes in batches by replacing existing session hosts.
 - **Scheduled agent updates** *(GA: July 2022)* - allowing administrators to define maintenance windows and reduce the risk of unexpected restarts during business hours.
+- **RDP Multipath** *(GA: July 2025; enhanced TCP paths preview: April 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
+- **Azure Virtual Desktop for hybrid environments with Arc-enabled servers** *(Public preview: May 2026)* - allowing session hosts to run on any hypervisor or bare-metal Windows Server through the Azure Arc extension, without VM provisioning or power management in this preview.
 
 #### App Delivery and Profile Management
-- **App Attach** *(new features preview: December 2023; portal management available: June 2024; MSIX App Attach deprecated: June 2025)* - supports additional package formats and simplifies the staging and assignment workflow through the Azure portal.
+- **App Attach** *(new features preview: December 2023; portal management available: June 2024; MSIX App Attach deprecated: June 2025; Windows Server 2025 and 2022 support: April 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
 - **FSLogix profile container with Microsoft Entra-joined VMs on Azure Files** *(GA: November 2022)* - enabling profile persistence for cloud-only identities using Azure Files as SMB storage, removing the dependency on on-premises Active Directory.
-- **Cloud Cache** *(performance improvements in FSLogix 2201: May 2022; PowerShell troubleshooting module and FSLogix v3 Early Access: December 2024)* - increases resiliency for profile replication across multiple storage endpoints and supports business continuity scenarios with geographically separated backends.
+- **FSLogix support for cloud-only and external identities** *(Preview: November 2025)* - enabling FSLogix profile containers for both cloud-only and external identities in pooled host pools.
+- **Cloud Cache** *(performance improvements in FSLogix 2201: March 2022; FSLogix v3 GA with PowerShell troubleshooting module: February 2025)* - increases resiliency for profile replication across multiple storage endpoints and supports business continuity scenarios with geographically separated backends.
 
 #### Security and Compliance
 - **Watermarking** *(Preview: January 2023; GA: July 2023)* - adding QR-code-based overlays to RDP sessions to deter and trace unauthorized screen captures.
 - **Screen capture protection** *(GA: August 2021)* - preventing client-side tools from capturing session content, with support extended to additional client platforms in subsequent releases.
 - **Private Link for Azure Virtual Desktop** *(Preview: November 2022; GA: July 2023)* - routing AVD control plane and session traffic over private networks and removing the need for public internet exposure.
+- **RDP Shortpath over Private Link** *(Preview: February 2025; GA: February 2026)* - enabling UDP-based RDP Shortpath connections over Azure Private Link with explicit opt-in.
 - **Clipboard transfer redirection policies** *(Preview: March 2024; GA: August 2024)* - providing fine-grained control over which directions (client to host or host to client) clipboard content can flow inside a session.
+- **Windows Cloud Keyboard Input Protection** *(Preview: November 2025)* - encrypting keystrokes at the kernel level to help protect sessions from keylogger malware and endpoint threats.
 
 #### Client Experience
-- **Windows App** *(Preview: November 2023; GA: September 2024)* - replacing the legacy Remote Desktop clients across Windows, macOS, iOS, Android and web, providing a unified access experience for Azure Virtual Desktop, Windows 365 and Remote Desktop Services.
+- **Windows App** *(Preview: November 2023; GA: September 2024; Android GA: April 2025)* - providing a unified access experience for Azure Virtual Desktop, Windows 365, Microsoft Dev Box and supported Remote Desktop scenarios across Windows, macOS, iOS, iPadOS, Android, web browsers and Meta Quest.
 - **Teams media optimization** *(Multimedia redirection GA: February 2023; New Teams SlimCore preview: June 2024; WebRTC-based Teams GA: March 2026)* - reducing latency and improving call quality for meetings running inside AVD sessions through progressively newer optimization architectures.
+- **Direct launch URLs for Windows App** *(May 2025)* - allowing users to connect directly to a specific desktop or application resource from a browser link.
 
 ### Azure Virtual Desktop
 
@@ -99,7 +104,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to apply existing Windows Server and Windows 10/11 licenses to reduce session host costs through the Azure Hybrid Benefit program.
 - [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)  
   Security recommendations and best practices for AVD deployments covering identity, networking, session security and data protection.
-- [Azure Virtual Desktop for Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-stack-hci-overview)  
+- [Azure Virtual Desktop for Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview)
   Running Azure Virtual Desktop session hosts on Azure Local for data residency and latency requirements in regulated or edge scenarios.
 - [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459)  
   Guidance on evaluating AVD environments with the Well-Architected Framework assessment to identify risks, measure maturity and improve architecture quality.
@@ -122,7 +127,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 ### App Attach
 
 - [App Attach overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-overview)  
-  Introduction to App Attach, which allows MSIX-packaged applications to be staged and delivered dynamically to AVD session hosts without installation.
+  Introduction to App Attach, which allows MSIX, Appx and App-V packages to be staged and delivered dynamically to AVD session hosts without installation.
 - [Set up App Attach (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-setup)  
   Step-by-step guide to configuring App Attach in the Azure portal, including image storage in Azure Files and assignment to host pools.
 - [MSIX Packaging Tool (Microsoft Docs)](https://learn.microsoft.com/en-us/windows/msix/packaging-tool/tool-overview)  
@@ -183,8 +188,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Official Microsoft repository with Bicep and Terraform reference implementations for deploying AVD following the enterprise-scale landing zone pattern.
 - [RDS-Templates (GitHub)](https://github.com/Azure/RDS-Templates)  
   Official Microsoft repository containing ARM templates and PowerShell scripts for host pool creation, session host provisioning and application group management.
-- [Azure Virtual Desktop - Sizing Guides (GitHub)](https://github.com/jonathan-vella/azure-local-sizing-guides)  
-  Sizing guidance maintained by Jonathan Vella (Microsoft Senior CSA) covering AVD, AKS and Arc-enabled SQL MI on Azure Local.
 
 ---
 
@@ -292,11 +295,19 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [ryanmangansitblog.com](https://ryanmangansitblog.com/)  
   Blog by MVP [Ryan Mangan](https://www.linkedin.com/in/ryanmangan/) covering Azure Virtual Desktop in depth, including troubleshooting, optimization and new feature walkthroughs.
 - [gettothe.cloud](https://www.gettothe.cloud/)  
-  Blog by [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen) focused mainly on AVD, Azure Local and IaC. Highly recommended reading.
+  Blog by [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen) focused mainly on AVD, Windows Cloud and IaC. Highly recommended reading.
+- [AVD Community Newsletter](https://avdcommunity.com/category/newsletter/)
+  Community-run newsletter curated mainly by Aresh Sarkari, with recurring AVD links, Microsoft announcements and contributions from authors such as Johan Vanneuville, Marcel Meurer and Travis Roberts.
+- [AskAresh](https://askaresh.com/)
+  Blog by Aresh Sarkari with hands-on AVD, Terraform, automation and end-user computing content frequently referenced by the AVD Community Newsletter.
+- [johanvanneuville.com](https://johanvanneuville.com/)
+  Blog by MVP [Johan Vanneuville](https://www.linkedin.com/in/johan-vanneuville-64142b4b/) covering Azure Virtual Desktop, Windows 365, Nerdio and cloud endpoint security.
 - [christiaanbrinkhoff.com](https://www.christiaanbrinkhoff.com/)  
-  Blog by [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/) (Microsoft Principal PM Manager for Azure Virtual Desktop) featuring the latest AVD announcements, deep dives and public roadmap previews.
+  Blog by [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/), Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader, featuring cloud endpoint strategy, AVD, Windows 365 and community content.
 - [blog.itprocloud.de](https://blog.itprocloud.de/)  
   Blog by [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/) featuring AVD automation tools, Hydra technical deep dives and host pool management patterns.
+- [ciraltos.com](https://www.ciraltos.com/)
+  Blog by Microsoft MVP Travis Roberts with practical AVD networking, regional host pool, Windows 365 and Azure infrastructure walkthroughs.
 - [avdpunks.com](https://avdpunks.com/)  
   Community blog by a group of AVD specialists covering a wide range of topics from initial deployment to advanced optimization and security.
 - [rozemuller.com](https://rozemuller.com/)  
@@ -319,7 +330,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 *Most day-to-day news on Azure Virtual Desktop arrives first on LinkedIn. Here are profiles worth following.*
 
 - [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/)  
-  Microsoft Principal PM Manager for Azure Virtual Desktop who regularly publishes feature announcements, deep dives and roadmap previews directly from the product group.
+  Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader who publishes cloud endpoint strategy, AVD, Windows 365 and community content.
 - [Ryan Mangan](https://www.linkedin.com/in/ryanmangan/)  
   UK-based MVP who publishes detailed AVD content covering new features, optimization techniques and real-world troubleshooting cases.
 - [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/)  
@@ -329,11 +340,15 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Stefan Dingemanse](https://www.linkedin.com/in/stefandingemanse/)  
   Netherlands-based MVP and AVD specialist who publishes practical content covering networking, identity and deployment automation.
 - [Tom Hickling](https://www.linkedin.com/in/tomhickling/)  
-  UK-based MVP covering Azure Virtual Desktop with a focus on enterprise deployments, governance and best practices.
+  Microsoft Senior Product Manager for Azure Virtual Desktop Engineering covering enterprise deployments, service resilience and best practices.
+- [Johan Vanneuville](https://www.linkedin.com/in/johan-vanneuville-64142b4b/)
+  Windows and Devices MVP, Nerdio NVP and co-author of *Securing Cloud PCs and Azure Virtual Desktop* who publishes practical AVD and Windows 365 security guidance.
+- [Thomas Marcussen](https://www.linkedin.com/in/thomasmarcussen/)
+  Microsoft MVP and early AVD Community contributor involved in newsletter publishing and broader Microsoft endpoint community work.
 - [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen)  
   Focused on AVD and Azure Local content including IaC, hybrid scenarios and real-world implementation patterns.
 - [Bas van Kaam](https://www.linkedin.com/in/basvankaamnl/)  
-  AVD specialist and author of *Mastering Microsoft Azure Virtual Desktop* who regularly shares community updates, book insights and technical deep dives.
+  End-user computing specialist and author who regularly shares community updates, book insights and technical deep dives.
 
 ### YouTube
 
@@ -345,10 +360,14 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Channel by MVP Ryan Mangan covering Azure Virtual Desktop features, labs and step-by-step walkthroughs.
 - [Marcel Meurer](https://www.youtube.com/@MarcelMeurer)  
   Channel by Marcel Meurer focusing on Hydra, WVD Admin tooling and AVD automation demonstrations.
+- [Windows IT Pro](https://www.youtube.com/@WindowsITPro)
+  Microsoft video channel that hosts Windows in the Cloud episodes covering Azure Virtual Desktop, Windows 365, Windows App and Windows Cloud engineering updates.
+- [Travis Roberts](https://www.youtube.com/c/TravisRoberts)
+  Channel by Microsoft MVP Travis Roberts with Azure, AVD, Windows 365 and infrastructure tutorials often paired with Ciraltos blog posts.
 - [Carsten Rachfall](https://www.youtube.com/@CarstenRachfahl)  
-  German-language channel by MVP Carsten Rachfall streaming Azure Virtual Desktop and Azure Local implementations.
+  German-language channel by MVP Carsten Rachfall streaming Azure Virtual Desktop, Windows 365 and Microsoft cloud workspace implementations.
 
-### Github Repos and Tools
+### GitHub Repos and Tools
 
 - [AVD Accelerator (GitHub)](https://github.com/Azure/avdaccelerator)  
   Official Microsoft repository with Bicep and Terraform code for deploying AVD following the enterprise-scale landing zone pattern. The most complete IaC starting point for new AVD deployments.
@@ -369,6 +388,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [Azure Virtual Desktop Tech Community (Microsoft)](https://techcommunity.microsoft.com/category/AzureVirtualDesktop)  
   Official Microsoft Tech Community space for Azure Virtual Desktop announcements, Q&A and community discussions moderated by the product team.
+- [AVD Community User Groups](https://avdcommunity.com/user-groups/)
+  Community hub for Azure Virtual Desktop user groups and newsletter-driven community updates.
 
 ### Trainings
 
@@ -385,9 +406,11 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 | Name | Description | Price | Remote | Date |
 |------|-------------|-------|--------|------|
-| ~~[AVD Tech Fest - Berlin (Germany)](https://www.controlup.com/avd-techfest-2025/)~~ | Community-driven event focused exclusively on Azure Virtual Desktop organized by the AVD community. | ~~99 €~~ | ~~No~~ | ~~September 10-11, 2025~~ |
-| ~~[Microsoft Ignite - San Francisco (USA)](https://register.ignite.microsoft.com/)~~ | Flagship Microsoft conference featuring Azure Virtual Desktop sessions, roadmap previews and hands-on labs. | ~~2325 $~~ | ~~Yes (Digital pass are **Free**)~~ | ~~November 17-21, 2025~~ |
-| [CDC Germany 2026 - Hanau (Germany)](https://www.cdc-germany.de/) | Two-day Cloud and Datacenter Conference with sessions on AVD, Windows 365, Intune and hybrid identity alongside Azure Local and Windows Server content. | €499-€999 (net, depending on ticket type) | No | September 30 - October 1, 2026 |
+| ~~[EUC World Virtual 2026](https://worldofeuc.org/EUCWorld2026_Virtual)~~ | Vendor-neutral virtual EUC conference with sessions on digital workspaces, Intune, Nerdio Manager and desktop modernization. | ~~Not listed~~ | ~~Yes~~ | ~~April 29, 2026~~ |
+| ~~[NerdioCon 2026 - Palm Springs (USA)](https://www.nerdiocon.com/)~~ | Nerdio conference focused on Microsoft cloud endpoint management, Azure Virtual Desktop, Windows 365, Intune and AI-driven operations. | ~~Not listed~~ | ~~No~~ | ~~May 4-6, 2026~~ |
+| [Windows Cloud Workshop series - multiple cities](https://getnerdio.com/events/) | Hands-on Nerdio and Microsoft workshop series for Azure Virtual Desktop, Windows 365, cloud endpoint strategy and guided lab practice. | Not listed | No | May 13 - June 11, 2026 |
+| [EUC World 2026 - Milwaukee (USA)](https://worldofeuc.org/EUCWorld2026) | Community-driven EUC conference covering virtual desktops, DaaS, Windows in the Cloud, app delivery and digital workspace operations. | $300-$400, depending on registration date | No | September 29 - October 1, 2026 |
+| [Microsoft Ignite 2026 - San Francisco (USA)](https://ignite.microsoft.com/en-US/home) | Microsoft flagship conference for Azure, Windows, Microsoft 365 and security, with expected Windows Cloud, Azure Virtual Desktop and Windows 365 announcements. | Not listed | To be confirmed | November 17-20, 2026 |
 
 <!-- AWESOMEAZUREVIRTUALDESKTOP:END -->
 ---
