@@ -12,6 +12,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
   - [FSLogix](#fslogix)
   - [App Attach](#app-attach)
   - [Windows App](#windows-app)
+  - [Microsoft Intune](#microsoft-intune)
   - [Monitoring and Insights](#monitoring-and-insights)
   - [Architecture and Best Practices](#architecture-and-best-practices)
   - [GitHub Repositories](#github-repositories)
@@ -103,7 +104,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Azure Hybrid Benefit for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-hybrid-benefit)  
   How to apply existing Windows Server and Windows 10/11 licenses to reduce session host costs through the Azure Hybrid Benefit program.
 - [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)  
-  Security recommendations and best practices for AVD deployments covering identity, networking, session security and data protection.
+  Security guidance for AVD deployments covering identity, networking, session security and data protection.
 - [Azure Virtual Desktop for Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview)
   Running Azure Virtual Desktop session hosts on Azure Local for data residency and latency requirements in regulated or edge scenarios.
 - [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459)  
@@ -118,7 +119,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Configure FSLogix profile containers with Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-profile-container-azure-files)  
   How to use Azure Files (SMB) as a storage backend for FSLogix profile containers, suitable for most small and medium deployments.
 - [Configure FSLogix profile containers with Azure NetApp Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-profile-container-netapp)  
-  How to use Azure NetApp Files for high-performance FSLogix profile storage, recommended for large deployments or latency-sensitive workloads.
+  How to use Azure NetApp Files for high-performance FSLogix profile storage in large deployments or latency-sensitive workloads.
 - [FSLogix Cloud Cache (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-cloud-cache)  
   How to use FSLogix Cloud Cache to replicate profile containers across multiple storage locations for resilience and business continuity.
 - [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new)  
@@ -146,6 +147,27 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [What's new in Windows App (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/whats-new)  
   Release notes and changelogs for the Windows App client across all supported platforms.
 
+### Microsoft Intune
+
+- [Microsoft Intune Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/mem/intune/)
+  Documentation hub for Microsoft Intune endpoint management, app management, endpoint security and device compliance.
+- [Manage the operating system of Azure Virtual Desktop session hosts (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/management)
+  Overview of using Microsoft Intune or Configuration Manager to manage Azure Virtual Desktop session hosts.
+- [Using Azure Virtual Desktop single-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop)
+  How to manage personal desktop session hosts with Intune policy, apps, compliance policy and Conditional Access.
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop-multi-session)
+  How to manage Windows Enterprise multi-session session hosts using device-scope and user-scope Intune policies.
+- [Use the Intune settings catalog (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/configuration/settings-catalog)
+  How to create granular configuration profiles with device and user scope settings, including Windows Enterprise multi-session filters.
+- [Intune security baselines (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-security/security-baselines/overview)
+  Overview of Intune security baseline profiles for Windows devices and endpoint security configuration.
+- [Windows App deployment by using Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-windows-10-app-deploy)
+  How to deploy Windows applications with Intune, including app assignment and Windows app deployment behavior.
+- [Configure clipboard redirection with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/redirection-configure-clipboard?tabs=intune)
+  How to configure clipboard redirection for Azure Virtual Desktop session hosts using Intune settings catalog or Group Policy.
+- [Manage Windows Update ring policies with Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-updates/windows/update-rings)
+  How Windows Update ring policies define update behavior for Windows devices; for AVD multi-session, use supported Windows Update settings in the Settings catalog.
+
 ### Monitoring and Insights
 
 - [Azure Virtual Desktop Insights (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights)  
@@ -155,7 +177,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Diagnostic settings in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics)  
   How to enable and route AVD diagnostic logs to Log Analytics for custom querying and long-term retention.
 - [Monitor session host performance (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/performance-counters)  
-  Recommended Windows performance counters to capture on AVD session hosts for capacity planning and user experience monitoring.
+  Windows performance counters used on AVD session hosts for capacity planning and user experience monitoring.
 - [Set up alerts for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-alerts)  
   How to create Azure Monitor alert rules that trigger on AVD-specific conditions such as connection failures and session host health changes.
 
@@ -291,11 +313,11 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 *To avoid an excessive list, only entire blogs are referenced, not individual posts.*
 
 - [schmitt-nieto.com](https://schmitt-nieto.com/tags/#azure-virtual-desktop)  
-  Yes, naming my own blog first is bad form, but here I share hands-on content about AVD implementation and management.
+  Blog with hands-on content about AVD implementation and management.
 - [ryanmangansitblog.com](https://ryanmangansitblog.com/)  
   Blog by MVP [Ryan Mangan](https://www.linkedin.com/in/ryanmangan/) covering Azure Virtual Desktop in depth, including troubleshooting, optimization and new feature walkthroughs.
 - [gettothe.cloud](https://www.gettothe.cloud/)  
-  Blog by [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen) focused mainly on AVD, Windows Cloud and IaC. Highly recommended reading.
+  Blog by [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen) focused mainly on AVD, Windows Cloud and IaC.
 - [AVD Community Newsletter](https://avdcommunity.com/category/newsletter/)
   Community-run newsletter curated mainly by Aresh Sarkari, with recurring AVD links, Microsoft announcements and contributions from authors such as Johan Vanneuville, Marcel Meurer and Travis Roberts.
 - [AskAresh](https://askaresh.com/)
@@ -314,8 +336,16 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Blog by MVP [Sander Rozemuller](https://www.linkedin.com/in/sanderrozemuller/) focused on Azure Virtual Desktop automation using the REST API, PowerShell and infrastructure-as-code.
 - [imab.dk](https://imab.dk/)  
   Blog by [Nicolaj Andersen](https://www.linkedin.com/in/nicolajandersen/) with practical AVD and Intune content focused on implementation and scripted automation.
-- [andrewstaylor.me](https://andrewstaylor.me/)  
-  Blog by [Andrew Taylor](https://www.linkedin.com/in/andrew-taylor-it/) covering AVD, Intune and Microsoft 365 with a focus on automation and community tooling.
+- [andrewstaylor.com](https://andrewstaylor.com/)
+  Blog by Andrew Taylor covering Intune, FSLogix configuration without Group Policy, application packaging, AVD automation and EUC tooling.
+- [All about Endpoint Management](https://eskonr.com/)
+  Blog by Eswar Koneti covering Intune, Configuration Manager, Conditional Access, Windows Update for Business and AVD or Windows 365 operational scenarios.
+- [All about Microsoft Intune](https://petervanderwoude.nl/)
+  Blog by Peter van der Woude covering Intune, Windows 365, Cloud PCs, Conditional Access and endpoint configuration.
+- [Benoit Hamet](https://blog.hametbenoit.info/)
+  Blog by Benoit Hamet covering Microsoft Intune, Azure Virtual Desktop clipboard redirection and Microsoft 365 administration.
+- [Call4Cloud](https://call4cloud.nl/)
+  Blog by Rudy Ooms focused on Intune internals, Windows Autopilot, Endpoint Privilege Management and endpoint troubleshooting.
 - [mikemdm.de](https://mikemdm.de/)  
   Blog by MVP [Michael Meier](https://www.linkedin.com/in/michael-meier-ba3b72210/) covering AVD and Azure Local labs and real-world implementations.
 - [jacquestheron.com](https://www.jacquestheron.com/)  
@@ -327,7 +357,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### LinkedIn
 
-*Most day-to-day news on Azure Virtual Desktop arrives first on LinkedIn. Here are profiles worth following.*
+*Most day-to-day news on Azure Virtual Desktop arrives first on LinkedIn. Here are relevant community profiles.*
 
 - [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/)  
   Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader who publishes cloud endpoint strategy, AVD, Windows 365 and community content.
@@ -345,6 +375,16 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Windows and Devices MVP, Nerdio NVP and co-author of *Securing Cloud PCs and Azure Virtual Desktop* who publishes practical AVD and Windows 365 security guidance.
 - [Thomas Marcussen](https://www.linkedin.com/in/thomasmarcussen/)
   Microsoft MVP and early AVD Community contributor involved in newsletter publishing and broader Microsoft endpoint community work.
+- [Shabaz Darr](https://www.linkedin.com/in/shabaz-darr-900b8361/)
+  Microsoft MVP and I Am IT Geek creator publishing Azure Virtual Desktop, Windows 365, Nerdio and Microsoft cloud architecture content.
+- [Andrew Taylor](https://www.linkedin.com/in/andrew-taylor-41707916/)
+  Microsoft MVP publishing Intune automation, AVD deployment, FSLogix configuration and endpoint management tooling.
+- [Peter van der Woude](https://www.linkedin.com/in/peterwoude/)
+  Microsoft MVP focused on Microsoft Intune, Windows 365, Conditional Access and modern endpoint management.
+- [Benoit Hamet](https://www.linkedin.com/in/benoithamet/)
+  Microsoft cloud specialist publishing Intune, Azure Virtual Desktop, Microsoft 365 and security configuration content.
+- [Rudy Ooms](https://www.linkedin.com/in/rudyooms/)
+  Microsoft MVP focused on Intune internals, Windows Autopilot, Endpoint Privilege Management and endpoint troubleshooting.
 - [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen)  
   Focused on AVD and Azure Local content including IaC, hybrid scenarios and real-world implementation patterns.
 - [Bas van Kaam](https://www.linkedin.com/in/basvankaamnl/)  
@@ -352,25 +392,33 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### YouTube
 
-*Channels that focus primarily on Azure Virtual Desktop rather than hosting only an occasional video.*
+*Channels with recurring Azure Virtual Desktop, Windows 365, Windows Cloud and related Azure infrastructure content.*
 
-- [Microsoft Cloud Workshop](https://www.youtube.com/@MicrosoftCloudWorkshop)  
-  Channel by Dean Cefola (Microsoft CSA) featuring in-depth AVD technical sessions, architecture reviews and hands-on labs.
+- [Azure Academy](https://www.youtube.com/c/AzureAcademy)
+  Channel by Dean Cefola with Azure Virtual Desktop, Windows 365, Azure infrastructure and Microsoft cloud operations walkthroughs.
 - [Ryan Mangan](https://www.youtube.com/@RyanManganMVP)  
   Channel by MVP Ryan Mangan covering Azure Virtual Desktop features, labs and step-by-step walkthroughs.
-- [Marcel Meurer](https://www.youtube.com/@MarcelMeurer)  
-  Channel by Marcel Meurer focusing on Hydra, WVD Admin tooling and AVD automation demonstrations.
-- [Windows IT Pro](https://www.youtube.com/@WindowsITPro)
-  Microsoft video channel that hosts Windows in the Cloud episodes covering Azure Virtual Desktop, Windows 365, Windows App and Windows Cloud engineering updates.
+- [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics)
+  Official Microsoft channel with demos and product walkthroughs for Azure Virtual Desktop, Windows 365, Windows App and Microsoft 365 services.
+- [I Am IT Geek](https://www.youtube.com/channel/UCt5sNdu14RterwDfEDEJidQ)
+  Channel by Microsoft MVP Shabaz Darr covering Azure Virtual Desktop, Windows 365, Nerdio, Azure security and Microsoft cloud architecture.
+- [John Savill's Technical Training](https://www.youtube.com/c/NTFAQGuy)
+  Technical training channel by John Savill covering Azure platform services, identity, networking and selected Azure Virtual Desktop scenarios.
 - [Travis Roberts](https://www.youtube.com/c/TravisRoberts)
   Channel by Microsoft MVP Travis Roberts with Azure, AVD, Windows 365 and infrastructure tutorials often paired with Ciraltos blog posts.
-- [Carsten Rachfall](https://www.youtube.com/@CarstenRachfahl)  
-  German-language channel by MVP Carsten Rachfall streaming Azure Virtual Desktop, Windows 365 and Microsoft cloud workspace implementations.
+- [Jonathan Edwards](https://www.youtube.com/@bearded365guy)
+  Channel covering Microsoft 365, Intune, Windows 365, security and endpoint management topics relevant to AVD operations.
+- [Neil McLoughlin](https://www.youtube.com/@virtualmanc)
+  Channel by Neil McLoughlin covering Azure Virtual Desktop, Windows 365, Nerdio and EUC architecture topics.
+- [Susanth Sutheesh](https://www.youtube.com/@SusanthSutheesh)
+  Channel covering Azure Virtual Desktop, Windows 365, Intune, Microsoft 365 and endpoint administration.
+- [Mike in the Cloud](https://www.youtube.com/@mwcloud)
+  Channel covering Microsoft cloud administration, Azure Virtual Desktop, Windows 365 and endpoint management.
 
 ### GitHub Repos and Tools
 
 - [AVD Accelerator (GitHub)](https://github.com/Azure/avdaccelerator)  
-  Official Microsoft repository with Bicep and Terraform code for deploying AVD following the enterprise-scale landing zone pattern. The most complete IaC starting point for new AVD deployments.
+  Official Microsoft repository with Bicep and Terraform code for deploying AVD following the enterprise-scale landing zone pattern.
 - [RDS-Templates (GitHub)](https://github.com/Azure/RDS-Templates)  
   Official Microsoft repository with ARM templates and PowerShell scripts for host pool creation, session host registration and application group management.
 - [GetToThe-Cloud - Website (GitHub)](https://github.com/GetToThe-Cloud/Website)  
@@ -406,6 +454,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 | Name | Description | Price | Remote | Date |
 |------|-------------|-------|--------|------|
+| ~~[AVD Tech Fest 2025 - Berlin (Germany)](https://www.controlup.com/avd-techfest-2025/)~~ | Community-driven EUC event focused on Azure Virtual Desktop, Windows 365, Citrix, Omnissa and digital workspace solutions. | ~~99 EUR~~ | ~~No~~ | ~~September 10-11, 2025~~ |
 | ~~[EUC World Virtual 2026](https://worldofeuc.org/EUCWorld2026_Virtual)~~ | Vendor-neutral virtual EUC conference with sessions on digital workspaces, Intune, Nerdio Manager and desktop modernization. | ~~Not listed~~ | ~~Yes~~ | ~~April 29, 2026~~ |
 | ~~[NerdioCon 2026 - Palm Springs (USA)](https://www.nerdiocon.com/)~~ | Nerdio conference focused on Microsoft cloud endpoint management, Azure Virtual Desktop, Windows 365, Intune and AI-driven operations. | ~~Not listed~~ | ~~No~~ | ~~May 4-6, 2026~~ |
 | [Windows Cloud Workshop series - multiple cities](https://getnerdio.com/events/) | Hands-on Nerdio and Microsoft workshop series for Azure Virtual Desktop, Windows 365, cloud endpoint strategy and guided lab practice. | Not listed | No | May 13 - June 11, 2026 |
