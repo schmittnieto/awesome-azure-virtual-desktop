@@ -1,3 +1,5 @@
+![Awesome Azure Virtual Desktop](/img/awesome_azure_virtual_desktop.png)
+
 # Awesome Azure Virtual Desktop
 
 A curated list of links and resources for **Azure Virtual Desktop** and its related technologies. Inspired by [Awesome Azure Architecture](https://aka.ms/AwesomeAzureArchitecture), which follows a similar model for Azure architecture links, this repository centralizes knowledge for professionals deploying or managing cloud-hosted virtual desktops and remote applications.
