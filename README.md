@@ -429,8 +429,10 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   GitHub profile of Sander Rozemuller (MVP) with scripts and modules for managing Azure Virtual Desktop through the REST API and PowerShell, covering host pools, session hosts and application groups.
 - [Marcel Meurer - WVD-Hydra (GitHub)](https://github.com/MarcelMeurer/WVD-Hydra)  
   Open-source AVD management tool by Marcel Meurer covering host pool automation, image management and session control, predecessor to the commercial Hydra product.
+- [Intune Drive Mapping Generator](https://intunedrivemapping.azurewebsites.net/DriveMapping)  
+  Web generator by Nicola Suter for building Intune PowerShell scripts that map network drives on Intune-managed Windows devices. The [GitHub repository](https://github.com/nicolonsky/IntuneDriveMapping) includes source code, documentation and examples for migrating existing Group Policy drive mappings or creating mappings from scratch.
 - [AVD - FSLogix Profile Status (Tool)](https://www.linkedin.com/posts/drazen-nikolic-816906142_avd-microsoft-azurevirtualdesktop-ugcPost-7364022385827557376-NEle)  
-  After the deprecation of FXTray, it became difficult to check the status of FSLogix profiles. With this PowerShell script, it is once again possible to verify profile status in a simple and centralized way.
+  After the deprecation of FXTray, it became difficult to check the status of FSLogix profiles. With this PowerShell script, it is once again possible to verify profile status in a simple and centralized way. The [GitHub repository](https://github.com/DrazenNikolic/FSLogix-Profile-Status) contains the Profile Monitor for FSLogix source and releases.
 - [AVD Sizing Guides (GitHub)](https://github.com/jonathan-vella/azure-local-sizing-guides)  
   Sizing guides for AVD and related services on Azure Local, maintained by Jonathan Vella (Microsoft Senior CSA).
 
