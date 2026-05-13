@@ -12,8 +12,11 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
   - [What's new in Azure Virtual Desktop?](#whats-new-in-azure-virtual-desktop)
   - [Azure Virtual Desktop](#azure-virtual-desktop)
   - [FSLogix](#fslogix)
+  - [Azure Files](#azure-files)
   - [App Attach](#app-attach)
   - [Windows App](#windows-app)
+  - [Windows 365](#windows-365)
+  - [Windows 365 Link](#windows-365-link)
   - [Microsoft Intune](#microsoft-intune)
   - [Monitoring and Insights](#monitoring-and-insights)
   - [Architecture and Best Practices](#architecture-and-best-practices)
@@ -127,6 +130,19 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new)  
   Release notes and update history for FSLogix versions.
 
+### Azure Files
+
+- [Azure Files Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/)
+  Documentation hub for Azure Files, the managed SMB file share service commonly used as FSLogix profile container storage for AVD.
+- [Overview of Azure Files identity-based authentication for SMB access (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview)
+  Overview of identity-based access for Azure Files over SMB, including share-level, directory-level and file-level permission models.
+- [Enable Microsoft Entra Kerberos authentication for hybrid and cloud-only identities on Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal%2Cintune)
+  How to enable Kerberos authentication for Azure Files with hybrid identities and cloud-only identities in preview, useful for FSLogix profile containers on Entra-joined AVD session hosts.
+- [Assign share-level permissions for Azure file shares (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-assign-share-level-permissions)
+  How to grant SMB access with Azure RBAC roles or default share-level permissions, including the default permission model required for cloud-only identities in preview.
+- [Configure directory and file-level permissions for Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-configure-file-level-permissions)
+  How to configure Windows ACLs for Azure file shares, including differences between hybrid identities and cloud-only identities when using Microsoft Entra Kerberos.
+
 ### App Attach
 
 - [App Attach overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-overview)  
@@ -146,8 +162,56 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to install and connect to Azure Virtual Desktop resources using Windows App on Windows.
 - [Windows App on macOS (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?pivots=macos)  
   How to use Windows App to access AVD on macOS devices.
+- [Compare Windows App features across platforms and devices (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/compare-platforms-features?pivots=azure-virtual-desktop)
+  Feature matrix comparing Windows App support for Azure Virtual Desktop across Windows, macOS, iOS, iPadOS, Android, Chrome OS, web browsers and Meta Quest.
 - [What's new in Windows App (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/whats-new)  
-  Release notes and changelogs for the Windows App client across all supported platforms.
+  Release notes and changelogs for the Windows App client across all supported platforms, including public release downloads for Windows outside of the Microsoft Store.
+- [Windows App public release download - Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2262633)
+  Direct Windows App installer for 64-bit Windows devices outside of the Microsoft Store.
+- [Windows App public release download - Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2318514)
+  Direct Windows App installer for 32-bit Windows devices outside of the Microsoft Store.
+- [Windows App public release download - Windows Arm64](https://go.microsoft.com/fwlink/?linkid=2318621)
+  Direct Windows App installer for Arm64 Windows devices outside of the Microsoft Store.
+
+### Windows 365
+
+- [Windows 365 Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/)
+  Documentation hub for Windows 365, Microsoft's Cloud PC service for streaming personalized Windows desktops from the Microsoft Cloud.
+- [What is Windows 365? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/overview)
+  Overview of Windows 365 editions, Cloud PC concepts, licensing and access options including Windows App, the web client and Windows 365 Link.
+- [Windows 365 Enterprise and Frontline Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/)
+  Documentation for planning, provisioning, managing and securing Cloud PCs with Microsoft Intune.
+- [Windows 365 Business Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/business/)
+  Documentation for smaller organizations using Windows 365 Business Cloud PCs with streamlined setup and management.
+- [Windows 365 requirements (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements)
+  Identity, licensing, Intune, Azure and role requirements for Windows 365 Enterprise, Frontline and Government deployments.
+- [Provisioning in Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/provisioning)
+  Overview of the automated process that creates, configures and assigns Cloud PCs to licensed users.
+- [Create provisioning policies (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/create-provisioning-policy)
+  How to define the rules Windows 365 uses to provision Cloud PCs for assigned Microsoft Entra groups.
+- [Access a Cloud PC (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/end-user-access-cloud-pc)
+  Supported client and browser options for users connecting to Windows 365 Cloud PCs.
+- [Windows 365 Azure network connection (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)
+  Architecture guidance for connecting Windows 365 Cloud PCs to customer-managed Azure networks and on-premises resources.
+- [What's new in Windows 365 Enterprise and Frontline (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new)
+  Release notes for Windows 365 Enterprise and Frontline features, updates and service improvements.
+
+### Windows 365 Link
+
+- [Windows 365 Link Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/)
+  Documentation hub for Windows 365 Link, Microsoft's purpose-built Cloud PC hardware device.
+- [What is Windows 365 Link? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/overview)
+  Overview of the secure Cloud PC device experience, hardware concept, Intune management model and core requirements.
+- [Windows 365 Link deployment overview (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/deployment-overview)
+  Admin guidance for preparing Microsoft Entra ID, Intune enrollment, filters and Conditional Access before onboarding devices.
+- [Requirements for Windows 365 Link deployment (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/requirements)
+  Licensing, Microsoft Entra ID, Intune and Windows 365 single sign-on requirements for deploying Windows 365 Link devices.
+- [Set up your Windows 365 Link and sign in (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/setup)
+  First-run setup flow for users connecting Windows 365 Link to their work or school account and Cloud PC.
+- [Sign in to, sign out, or lock your Windows 365 Link (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/sign-in)
+  User guidance for daily sign-in, sign-out and lock workflows on Windows 365 Link.
+- [What's new in Windows 365 Link (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/whats-new)
+  Release notes for Windows 365 Link builds, product improvements and device updates.
 
 ### Microsoft Intune
 
