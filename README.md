@@ -166,12 +166,12 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Feature matrix comparing Windows App support for Azure Virtual Desktop across Windows, macOS, iOS, iPadOS, Android, Chrome OS, web browsers and Meta Quest.
 - [What's new in Windows App (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/whats-new)  
   Release notes and changelogs for the Windows App client across all supported platforms, including public release downloads for Windows outside of the Microsoft Store.
-- [Windows App public release download - Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2262633)
-  Direct Windows App installer for 64-bit Windows devices outside of the Microsoft Store.
-- [Windows App public release download - Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2318514)
-  Direct Windows App installer for 32-bit Windows devices outside of the Microsoft Store.
-- [Windows App public release download - Windows Arm64](https://go.microsoft.com/fwlink/?linkid=2318621)
-  Direct Windows App installer for Arm64 Windows devices outside of the Microsoft Store.
+  - [Windows App public release download - Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2262633)
+    Direct Windows App installer for 64-bit Windows devices outside of the Microsoft Store.
+  - [Windows App public release download - Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2318514)
+    Direct Windows App installer for 32-bit Windows devices outside of the Microsoft Store.
+  - [Windows App public release download - Windows Arm64](https://go.microsoft.com/fwlink/?linkid=2318621)
+    Direct Windows App installer for Arm64 Windows devices outside of the Microsoft Store.
 
 ### Windows 365
 
