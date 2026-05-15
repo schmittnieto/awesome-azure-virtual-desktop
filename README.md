@@ -291,7 +291,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [Nerdio Manager for Enterprise](https://getnerdio.com/nerdio-manager-for-enterprise/)  
   Enterprise AVD management platform for automating host pool sizing, image management, cost optimization and session lifecycle from a single console.
-- [Nerdio Manager for Enterprise Documentation](https://nmehelp.getnerdio.com/hc/en-us/categories/360003434991-Nerdio-Manager-for-Enterprise)  
+- [Nerdio Manager for Enterprise Documentation](https://nmehelp.getnerdio.com/hc/en-us/categories/19703475699853-Knowledge-Base)  
   Official Nerdio documentation covering installation, configuration and day-to-day operations.
 - [Nerdio Cost Estimator](https://getnerdio.com/cost-estimator/)  
   Tool to estimate compute cost savings achieved by adopting Nerdio Manager's autoscale and scheduling features versus managing AVD manually.
@@ -316,7 +316,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### Citrix
 
-- [Citrix DaaS for Azure](https://www.citrix.com/products/citrix-daas/azure.html)  
+- [Citrix DaaS for Azure](https://docs.citrix.com/en-us/citrix-daas-azure.html)  
   Citrix Desktop as a Service offering on Azure, providing Citrix application delivery and management capabilities on top of Azure compute infrastructure.
 - [Citrix DaaS Documentation](https://docs.citrix.com/en-us/citrix-daas)  
   Complete Citrix DaaS documentation covering site configuration, machine catalog creation and Citrix policy management.
@@ -336,14 +336,14 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### Lakeside SysTrack
 
-- [Lakeside SysTrack - Azure Virtual Desktop](https://www.lakesidesoftware.com/solutions/microsoft-azure-virtual-desktop/)  
+- [Lakeside SysTrack - Azure Virtual Desktop](https://www.lakesidesoftware.com/solution-briefs/right-size-virtual-desktops-azure-systrack/)  
   SysTrack landing page for AVD, covering digital experience monitoring, right-sizing and migration readiness assessments for moving workloads to AVD.
-- [Lakeside SysTrack - Digital Experience Monitoring](https://www.lakesidesoftware.com/platform/digital-experience-monitoring/)  
+- [Lakeside SysTrack - Digital Experience Monitoring](https://www.lakesidesoftware.com/blog/what-is-digital-experience-monitoring/)  
   How Lakeside collects continuous endpoint telemetry to measure user experience quality inside AVD sessions and identify degradation before it affects users.
 
 #### Rimo3
 
-- [Rimo3 - Application Compatibility Testing for AVD](https://www.rimo3.com/solutions/avd/)  
+- [Rimo3 - Application Compatibility Testing for AVD](https://www.rimo3.com/citrix-to-avd-migration)  
   Rimo3 landing page for automated application compatibility and regression testing in AVD and Windows 365 migration projects.
 - [Rimo3 - Platform Overview](https://www.rimo3.com/platform/)  
   How Rimo3 automates application testing at scale, reducing manual effort and risk for large application portfolios migrating to AVD.
@@ -354,18 +354,18 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### IGEL
 
-- [IGEL - Azure Virtual Desktop](https://www.igel.com/azure-virtual-desktop/)  
+- [IGEL - Azure Virtual Desktop](https://www.igel.com/microsoft/)  
   IGEL landing page for AVD, covering how IGEL OS provides a secure and managed thin client endpoint for accessing AVD sessions with minimal local attack surface.
-- [IGEL Community](https://community.igel.com/)  
+- [IGEL Community](https://www.igel.de/learn-and-connect/community/)  
   Community hub for IGEL users and administrators with AVD-specific discussions, how-to guides and troubleshooting resources.
-- [IGEL Ready Program](https://www.igel.com/igel-ready/)  
+- [IGEL Ready Program](https://www.igel.de/ready/)  
   Partner ecosystem listing hardware and peripherals certified to work with IGEL OS in AVD environments.
 
 #### 10ZiG
 
 - [10ZiG - Azure Virtual Desktop](https://www.10zig.com/solutions/azure-virtual-desktop)  
   10ZiG landing page for AVD, covering thin client hardware and 10ZiG NOS purpose-built for accessing Azure Virtual Desktop environments.
-- [10ZiG Manager - Central Management](https://www.10zig.com/products/manager)  
+- [10ZiG Manager - Central Management](https://www.10zig.com/en/product/solutions/10zig-manager/)  
   Overview of 10ZiG's endpoint management platform for deploying and maintaining 10ZiG thin clients at scale in AVD deployments.
 
 ---
@@ -380,8 +380,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [schmitt-nieto.com](https://schmitt-nieto.com/tags/#azure-virtual-desktop)  
   Blog with hands-on content about AVD implementation and management.
-- [ryanmangansitblog.com](https://ryanmangansitblog.com/)  
-  Blog by MVP [Ryan Mangan](https://www.linkedin.com/in/ryanmangan/) covering Azure Virtual Desktop in depth, including troubleshooting, optimization and new feature walkthroughs.
 - [gettothe.cloud](https://www.gettothe.cloud/)  
   Blog by [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen) focused mainly on AVD, Windows Cloud and IaC.
 - [AVD Community Newsletter](https://avdcommunity.com/category/newsletter/)
@@ -427,13 +425,13 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/)  
   Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader who publishes cloud endpoint strategy, AVD, Windows 365 and community content.
-- [Ryan Mangan](https://www.linkedin.com/in/ryanmangan/)  
+- [Ryan Mangan](https://www.linkedin.com/in/ryanmangan01/)  
   UK-based MVP who publishes detailed AVD content covering new features, optimization techniques and real-world troubleshooting cases.
 - [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/)  
   Creator of WVD Admin and Hydra who shares AVD tooling updates, automation patterns and community resources.
 - [Sander Rozemuller](https://www.linkedin.com/in/sanderrozemuller/)  
   Dutch MVP publishing AVD automation content focused on REST API usage, Bicep and infrastructure-as-code approaches.
-- [Stefan Dingemanse](https://www.linkedin.com/in/stefandingemanse/)  
+- [Stefan Dingemanse](https://www.linkedin.com/in/sdingemanse/)  
   Netherlands-based MVP and AVD specialist who publishes practical content covering networking, identity and deployment automation.
 - [Tom Hickling](https://www.linkedin.com/in/tomhickling/)  
   Microsoft Senior Product Manager for Azure Virtual Desktop Engineering covering enterprise deployments, service resilience and best practices.
@@ -451,8 +449,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Microsoft cloud specialist publishing Intune, Azure Virtual Desktop, Microsoft 365 and security configuration content.
 - [Rudy Ooms](https://www.linkedin.com/in/rudyooms/)
   Microsoft MVP focused on Intune internals, Windows Autopilot, Endpoint Privilege Management and endpoint troubleshooting.
-- [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen)  
-  Focused on AVD and Azure Local content including IaC, hybrid scenarios and real-world implementation patterns.
 - [Bas van Kaam](https://www.linkedin.com/in/basvankaamnl/)  
   End-user computing specialist and author who regularly shares community updates, book insights and technical deep dives.
 
@@ -462,15 +458,13 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [Azure Academy](https://www.youtube.com/c/AzureAcademy)
   Channel by Dean Cefola with Azure Virtual Desktop, Windows 365, Azure infrastructure and Microsoft cloud operations walkthroughs.
-- [Ryan Mangan](https://www.youtube.com/@RyanManganMVP)  
-  Channel by MVP Ryan Mangan covering Azure Virtual Desktop features, labs and step-by-step walkthroughs.
 - [Microsoft Mechanics](https://www.youtube.com/@MSFTMechanics)
   Official Microsoft channel with demos and product walkthroughs for Azure Virtual Desktop, Windows 365, Windows App and Microsoft 365 services.
-- [I Am IT Geek](https://www.youtube.com/channel/UCt5sNdu14RterwDfEDEJidQ)
+- [I Am IT Geek](https://www.youtube.com/@IamITGeek)
   Channel by Microsoft MVP Shabaz Darr covering Azure Virtual Desktop, Windows 365, Nerdio, Azure security and Microsoft cloud architecture.
-- [John Savill's Technical Training](https://www.youtube.com/c/NTFAQGuy)
+- [John Savill's Technical Training](https://www.youtube.com/@NTFAQGuy)
   Technical training channel by John Savill covering Azure platform services, identity, networking and selected Azure Virtual Desktop scenarios.
-- [Travis Roberts](https://www.youtube.com/c/TravisRoberts)
+- [Travis Roberts](https://www.youtube.com/@Ciraltos)
   Channel by Microsoft MVP Travis Roberts with Azure, AVD, Windows 365 and infrastructure tutorials often paired with Ciraltos blog posts.
 - [Jonathan Edwards](https://www.youtube.com/@bearded365guy)
   Channel covering Microsoft 365, Intune, Windows 365, security and endpoint management topics relevant to AVD operations.
@@ -526,7 +520,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 | ~~[EUC World Virtual 2026](https://worldofeuc.org/EUCWorld2026_Virtual)~~ | Vendor-neutral virtual EUC conference with sessions on digital workspaces, Intune, Nerdio Manager and desktop modernization. | ~~Not listed~~ | ~~Yes~~ | ~~April 29, 2026~~ |
 | ~~[NerdioCon 2026 - Palm Springs (USA)](https://www.nerdiocon.com/)~~ | Nerdio conference focused on Microsoft cloud endpoint management, Azure Virtual Desktop, Windows 365, Intune and AI-driven operations. | ~~Not listed~~ | ~~No~~ | ~~May 4-6, 2026~~ |
 | [Windows Cloud Workshop series - multiple cities](https://getnerdio.com/events/) | Hands-on Nerdio and Microsoft workshop series for Azure Virtual Desktop, Windows 365, cloud endpoint strategy and guided lab practice. | Not listed | No | May 13 - June 11, 2026 |
-| [EUC World 2026 - Milwaukee (USA)](https://worldofeuc.org/EUCWorld2026) | Community-driven EUC conference covering virtual desktops, DaaS, Windows in the Cloud, app delivery and digital workspace operations. | $300-$400, depending on registration date | No | September 29 - October 1, 2026 |
+| [EUC World 2026 - Milwaukee (USA)](https://worldofeuc.org/EUCWorld2026) | Community-driven EUC conference covering virtual desktops, DaaS, Windows in the Cloud, app delivery and digital workspace operations. | $250-$400, depending on registration date | No | September 29 - October 1, 2026 |
 | [Microsoft Ignite 2026 - San Francisco (USA)](https://ignite.microsoft.com/en-US/home) | Microsoft flagship conference for Azure, Windows, Microsoft 365 and security, with expected Windows Cloud, Azure Virtual Desktop and Windows 365 announcements. | Not listed | To be confirmed | November 17-20, 2026 |
 
 <!-- AWESOMEAZUREVIRTUALDESKTOP:END -->
