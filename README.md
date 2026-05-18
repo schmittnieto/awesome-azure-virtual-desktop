@@ -52,33 +52,33 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 
 [What's new in Azure Virtual Desktop?](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new)
 
-Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key themes delivered across recent releases.
+Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from May 2025 onward.
 
 #### Autoscale and Host Pool Management
-- **Autoscale for personal host pools** *(Preview: July 2023; GA: November 2023)* - enabling power-off policies and scheduled scaling for assigned desktops to reduce idle compute costs.
-- **Session host configuration and update** *(Preview: November 2024; session host creation expansion: June 2025)* - defining VM disk type, operating system image and related session host properties for pooled host pools, then rolling out changes in batches by replacing existing session hosts.
-- **Scheduled agent updates** *(GA: July 2022)* - allowing administrators to define maintenance windows and reduce the risk of unexpected restarts during business hours.
-- **RDP Multipath** *(GA: July 2025; enhanced TCP paths preview: April 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
+- **Session host creation using a session host configuration** *(June 2025)* - extending session host creation, auto-retry behavior and diagnostics for host pools that use session host configuration.
+- **Managed identity support for session host configuration** *(validation host pools: August 2025; all host pools: September 2025)* - removing the need to assign permissions to the Azure Virtual Desktop service principal when creating and updating session hosts.
+- **Ephemeral OS disk support** *(Public preview: October 2025)* - enabling stateless session hosts to use local VM storage for faster provisioning, reimaging and performance.
+- **RDP Multipath** *(GA: July 2025; fully rolled out: November 2025; redundant TCP GA rollout: May 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
 - **Azure Virtual Desktop for hybrid environments with Arc-enabled servers** *(Public preview: May 2026)* - allowing session hosts to run on any hypervisor or bare-metal Windows Server through the Azure Arc extension, without VM provisioning or power management in this preview.
 
 #### App Delivery and Profile Management
-- **App Attach** *(new features preview: December 2023; portal management available: June 2024; MSIX App Attach deprecated: June 2025; Windows Server 2025 and 2022 support: April 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
-- **FSLogix profile container with Microsoft Entra-joined VMs on Azure Files** *(GA: November 2022)* - enabling profile persistence for cloud-only identities using Azure Files as SMB storage, removing the dependency on on-premises Active Directory.
+- **App Attach** *(MSIX App Attach deprecated: June 2025; Windows Server 2025 and 2022 support: April 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
 - **FSLogix support for cloud-only and external identities** *(Preview: November 2025)* - enabling FSLogix profile containers for both cloud-only and external identities in pooled host pools.
-- **Cloud Cache** *(performance improvements in FSLogix 2201: March 2022; FSLogix v3 GA with PowerShell troubleshooting module: February 2025)* - increases resiliency for profile replication across multiple storage endpoints and supports business continuity scenarios with geographically separated backends.
+- **Enhanced RemoteApps** *(Preview: November 2025)* - improving RemoteApp behavior with better Windows Snap support, full-screen mode, DPI handling and visual integration with Windows.
 
 #### Security and Compliance
-- **Watermarking** *(Preview: January 2023; GA: July 2023)* - adding QR-code-based overlays to RDP sessions to deter and trace unauthorized screen captures.
-- **Screen capture protection** *(GA: August 2021)* - preventing client-side tools from capturing session content, with support extended to additional client platforms in subsequent releases.
-- **Private Link for Azure Virtual Desktop** *(Preview: November 2022; GA: July 2023)* - routing AVD control plane and session traffic over private networks and removing the need for public internet exposure.
-- **RDP Shortpath over Private Link** *(Preview: February 2025; GA: February 2026)* - enabling UDP-based RDP Shortpath connections over Azure Private Link with explicit opt-in.
-- **Clipboard transfer redirection policies** *(Preview: March 2024; GA: August 2024)* - providing fine-grained control over which directions (client to host or host to client) clipboard content can flow inside a session.
+- **Select redirections disabled for new host pools** *(July 2025)* - disabling clipboard, drive, opaque low-level USB and printer redirections by default for newly created host pools.
+- **Token protection support in Windows App on Windows devices** *(GA: August 2025)* - allowing Conditional Access policies to require sign-in tokens that can only be used from the intended device.
+- **External identity support** *(Preview without FSLogix: September 2025; GA: November 2025; additional client support: April 2026)* - allowing external identities to access Azure Virtual Desktop resources with expanded client support.
+- **Centralized RDP Shortpath management** *(GA: January 2026)* - enabling administrators to configure RDP Shortpath transport modes through Microsoft Intune or Group Policy.
+- **RDP Shortpath over Private Link** *(GA: February 2026)* - enabling UDP-based RDP Shortpath connections over Azure Private Link with explicit opt-in.
 - **Windows Cloud Keyboard Input Protection** *(Preview: November 2025)* - encrypting keystrokes at the kernel level to help protect sessions from keylogger malware and endpoint threats.
 
 #### Client Experience
-- **Windows App** *(Preview: November 2023; GA: September 2024; Android GA: April 2025)* - providing a unified access experience for Azure Virtual Desktop, Windows 365, Microsoft Dev Box and supported Remote Desktop scenarios across Windows, macOS, iOS, iPadOS, Android, web browsers and Meta Quest.
-- **Teams media optimization** *(Multimedia redirection GA: February 2023; New Teams SlimCore preview: June 2024; WebRTC-based Teams GA: March 2026)* - reducing latency and improving call quality for meetings running inside AVD sessions through progressively newer optimization architectures.
 - **Direct launch URLs for Windows App** *(May 2025)* - allowing users to connect directly to a specific desktop or application resource from a browser link.
+- **Multiple personal desktops for a single user** *(GA: May 2025)* - assigning more than one personal desktop to a user in a single host pool.
+- **HEVC/H.265 hardware acceleration** *(GA: June 2025)* - improving GPU-accelerated frame encoding for graphical workloads in Azure Virtual Desktop sessions.
+- **Microsoft Teams media optimization** *(iOS and iPadOS preview: June 2025; WebRTC-based Teams GA and macOS preview: March 2026)* - reducing latency and improving call quality for meetings running inside AVD sessions through newer optimization architectures.
 
 ### Azure Virtual Desktop
 
