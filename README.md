@@ -386,6 +386,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Blog by [Alex ter Neuzen](https://www.linkedin.com/in/aterneuzen) focused mainly on AVD, Windows Cloud and IaC.
 - [AVD Community Newsletter](https://avdcommunity.com/category/newsletter/)
   Community-run newsletter curated mainly by Aresh Sarkari, with recurring AVD links, Microsoft announcements and contributions from authors such as Johan Vanneuville, Marcel Meurer and Travis Roberts.
+- [Windows365, AVD Weekly News](https://www.linkedin.com/newsletters/windows365-avd-weekly-news-7409581308168806400/)
+  LinkedIn newsletter by [Michel Roth](https://www.linkedin.com/in/michelroth/) collecting weekly Windows 365, Azure Virtual Desktop and endpoint management news from Microsoft and community authors.
 - [AskAresh](https://askaresh.com/)
   Blog by Aresh Sarkari with hands-on AVD, Terraform, automation and end-user computing content frequently referenced by the AVD Community Newsletter.
 - [johanvanneuville.com](https://johanvanneuville.com/)
@@ -427,6 +429,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/)  
   Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader who publishes cloud endpoint strategy, AVD, Windows 365 and community content.
+- [Michel Roth](https://www.linkedin.com/in/michelroth/)
+  Publisher of the Windows365, AVD Weekly News newsletter, sharing recurring Windows 365, Azure Virtual Desktop and modern endpoint management updates.
 - [Ryan Mangan](https://www.linkedin.com/in/ryanmangan/)  
   UK-based MVP who publishes detailed AVD content covering new features, optimization techniques and real-world troubleshooting cases.
 - [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/)  
