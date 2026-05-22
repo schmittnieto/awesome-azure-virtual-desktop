@@ -11,6 +11,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 - [Official](#official)
   - [What's new in Azure Virtual Desktop?](#whats-new-in-azure-virtual-desktop)
   - [Azure Virtual Desktop](#azure-virtual-desktop)
+  - [Azure Virtual Desktop Hybrid and Azure Local](#azure-virtual-desktop-hybrid-and-azure-local)
   - [FSLogix](#fslogix)
   - [Azure Files](#azure-files)
   - [App Attach](#app-attach)
@@ -19,6 +20,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
   - [Windows 365 Link](#windows-365-link)
   - [Microsoft Intune](#microsoft-intune)
   - [Monitoring and Insights](#monitoring-and-insights)
+  - [Network](#network)
   - [Architecture and Best Practices](#architecture-and-best-practices)
   - [GitHub Repositories](#github-repositories)
 - [Third Party](#third-party)
@@ -104,16 +106,21 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to enable QR-code watermarks in RDP sessions to deter and trace unauthorized screen captures.
 - [Screen capture protection (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/screen-capture-protection)  
   Policy that prevents client-side tools from capturing session content, relevant for regulated industries.
-- [Private Link for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-overview)  
-  Overview of using Azure Private Link to route AVD control plane and session traffic over private networks, removing the need for public internet exposure.
 - [Azure Hybrid Benefit for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-hybrid-benefit)  
   How to apply existing Windows Server and Windows 10/11 licenses to reduce session host costs through the Azure Hybrid Benefit program.
 - [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)  
   Security guidance for AVD deployments covering identity, networking, session security and data protection.
-- [Azure Virtual Desktop for Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview)
-  Running Azure Virtual Desktop session hosts on Azure Local for data residency and latency requirements in regulated or edge scenarios.
 - [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459)  
   Guidance on evaluating AVD environments with the Well-Architected Framework assessment to identify risks, measure maturity and improve architecture quality.
+
+### Azure Virtual Desktop Hybrid and Azure Local
+
+- [Azure Virtual Desktop Hybrid Overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/hybrid-overview)  
+  Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server. It is in public preview with validation host pools only and does not support Windows 10 or Windows 11 Enterprise multi-session.
+- [Azure Virtual Desktop on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview)  
+  Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images.
+- [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
+  Companion curated list for Azure Local with a dedicated Azure Virtual Desktop section covering deployment, management tooling and community resources for running AVD on Azure Local.
 
 ### FSLogix
 
@@ -247,6 +254,33 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Set up alerts for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-alerts)  
   How to create Azure Monitor alert rules that trigger on AVD-specific conditions such as connection failures and session host health changes.
 
+### Network
+
+- [Network connectivity in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/network-connectivity)  
+  Explains how RDP Shortpath, reverse connect transport and the AVD Gateway work together, with guidance for optimizing network paths.
+- [RDP Shortpath for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rdp-shortpath)  
+  How to enable direct UDP-based connectivity between clients and session hosts to reduce latency and improve session quality.
+- [Private Link for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-overview)  
+  Overview of using Azure Private Link to route AVD control plane and session traffic over private networks, removing the need for public internet exposure.
+- [Set up Private Link with Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-setup)  
+  Step-by-step guide to creating private endpoints for the AVD feed, connection and global discovery, including the private DNS zones required for name resolution.
+- [Azure Private Endpoint private DNS zone values (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns)  
+  Reference of the recommended private DNS zone names for Azure services that support private endpoints, including the `privatelink.wvd.microsoft.com` and `privatelink-global.wvd.microsoft.com` zones used by Azure Virtual Desktop.
+- [Required FQDNs and endpoints for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/required-fqdn-endpoint)  
+  List of FQDNs and endpoints that session hosts and clients must be able to reach for Azure Virtual Desktop to deploy and connect, grouped by session host virtual machines and end user devices.
+- [Check access to required FQDNs and endpoints for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/check-access-validate-required-fqdn-endpoint)  
+  How to run the Azure Virtual Desktop Agent URL Tool on a session host to validate that all required FQDNs and endpoints are reachable.
+- [Use Azure Firewall to protect Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/firewall/protect-azure-virtual-desktop)  
+  How to filter session host outbound traffic with Azure Firewall using the `WindowsVirtualDesktop` FQDN tag and service tag, including a sample policy from the RDS-Templates repository.
+- [Azure service tags overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview)  
+  How service tags group Azure service IP ranges so they can be used in network security group rules, Azure Firewall and user-defined routes instead of maintaining IP lists manually.
+- [Network endpoints for Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/fundamentals/endpoints)  
+  Consolidated list of IP addresses, FQDNs and ports that Intune-managed devices need through firewalls and proxies, relevant when managing AVD session hosts and Cloud PCs with Intune.
+- [Network requirements for Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements-network)  
+  Virtual network, DNS, service URL and port requirements for provisioning and connecting to Windows 365 Cloud PCs on a customer-managed Azure network.
+- [Microsoft 365 URLs and IP address ranges (Microsoft Docs)](https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges)  
+  Authoritative list of Microsoft 365 endpoints, including Microsoft Entra ID and Office 365, that AVD session hosts and clients often need to reach in restricted networks.
+
 ### Architecture and Best Practices
 
 - [Azure Virtual Desktop Landing Zone Accelerator (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone)  
@@ -265,10 +299,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Overview of the Azure Image Builder service used to automate the creation and distribution of custom AVD session host images.
 - [RBAC for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rbac)  
   Overview of built-in roles and how to delegate management tasks across operations, helpdesk and infrastructure teams in AVD.
-- [Network connectivity in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/network-connectivity)  
-  Explains how RDP Shortpath, reverse connect transport and the AVD Gateway work together, with guidance for optimizing network paths.
-- [RDP Shortpath for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rdp-shortpath)  
-  How to enable direct UDP-based connectivity between clients and session hosts to reduce latency and improve session quality.
 
 ### GitHub Repositories
 
