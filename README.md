@@ -149,6 +149,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to grant SMB access with Azure RBAC roles or default share-level permissions, including the default permission model required for cloud-only identities in preview.
 - [Configure directory and file-level permissions for Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-configure-file-level-permissions)
   How to configure Windows ACLs for Azure file shares, including differences between hybrid identities and cloud-only identities when using Microsoft Entra Kerberos.
+- [Entra-only identities for Azure Files SMB now generally available (Azure Blog)](https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/)
+  Announcement of the general availability (May 19, 2026) of Microsoft Entra-only identities for Azure Files SMB, enabling identity-based access to SMB file shares using cloud-only Entra ID accounts without on-premises Active Directory, which is directly relevant to FSLogix profile containers on Entra-joined AVD session hosts.
 
 ### App Attach
 
