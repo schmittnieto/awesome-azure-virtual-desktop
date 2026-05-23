@@ -1,0 +1,90 @@
+name: "Add URL"
+description: "Suggest a new link for the list."
+title: "[Add] <short title for the link>"
+labels: ["add", "triage"]
+body:
+  - type: dropdown
+    id: main_category
+    attributes:
+      label: Main category
+      options:
+        - Official
+        - Third Party
+        - Community
+    validations:
+      required: true
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Target section
+      description: "Pick the closest match. If unsure, choose 'Other' and explain below."
+      options:
+        - Official > What's new in Azure Virtual Desktop
+        - Official > Azure Virtual Desktop
+        - Official > FSLogix
+        - Official > App Attach
+        - Official > Windows App
+        - Official > Microsoft Intune
+        - Official > Monitoring and Insights
+        - Official > Architecture and Best Practices
+        - Official > GitHub Repositories
+        - Third Party > Management Platforms
+        - Third Party > Testing and Assessment
+        - Third Party > Thin Clients
+        - Community > Blog
+        - Community > LinkedIn
+        - Community > YouTube
+        - Community > GitHub Repos and Tools
+        - Community > Chats and Channels
+        - Community > Trainings
+        - Community > Events
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: input
+    id: link_title
+    attributes:
+      label: Link title
+      placeholder: "Concise name used in the README"
+    validations:
+      required: true
+
+  - type: textarea
+    id: one_liner
+    attributes:
+      label: One-line description
+      description: "Keep it factual and short. No marketing language."
+      placeholder: "What this link covers in one sentence."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)
+      description: "Context, why it is useful, or where exactly to place it."
+      placeholder: "Any extra details for maintainers."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verification
+      options:
+        - label: I verified the URL loads and is relevant to Azure Virtual Desktop.
+          required: true
+        - label: The description is neutral and factual.
+          required: true
+        - label: The link belongs to the selected category and section.
+          required: true
