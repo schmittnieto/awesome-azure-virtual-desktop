@@ -1,4 +1,4 @@
-![Awesome Azure Virtual Desktop](/img/awesome_azure_virtual_desktop.png)
+![Awesome Azure Virtual Desktop](img/awesome_azure_virtual_desktop.png)
 
 # Awesome Azure Virtual Desktop
 
@@ -98,16 +98,16 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Step-by-step guide to creating pooled or personal host pools in Azure Virtual Desktop.
 - [Autoscale for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-scaling-plan)  
   How to configure scaling plans to automatically start and stop session hosts based on demand, reducing compute costs.
-- [Personal host pools (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-personal-host-pool)  
-  How to create personal (dedicated) host pools for scenarios that require persistent desktops assigned to individual users.
+- [Personal desktop assignment (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type)
+  How to configure automatic or direct assignment for personal desktops, including multiple personal desktops per user.
 - [RemoteApp streaming (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/publish-applications-stream-remoteapp)  
   How to publish individual applications instead of full desktops using RemoteApp, reducing bandwidth and simplifying the user experience.
 - [Watermarking in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/watermarking)  
   How to enable QR-code watermarks in RDP sessions to deter and trace unauthorized screen captures.
 - [Screen capture protection (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/screen-capture-protection)  
   Policy that prevents client-side tools from capturing session content, relevant for regulated industries.
-- [Azure Hybrid Benefit for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-hybrid-benefit)  
-  How to apply existing Windows Server and Windows 10/11 licenses to reduce session host costs through the Azure Hybrid Benefit program.
+- [Licensing Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/licensing)
+  Eligible Windows, Microsoft 365 and Remote Desktop Services licenses for Azure Virtual Desktop deployments.
 - [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)  
   Security guidance for AVD deployments covering identity, networking, session security and data protection.
 - [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459)  
@@ -126,13 +126,13 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [FSLogix Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/)  
   Complete documentation for FSLogix profile and Office container solutions, now part of Microsoft 365.
-- [FSLogix Profile Container overview (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-fslogix-profiles)  
+- [FSLogix profile containers with Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/fslogix-profile-containers)
   How FSLogix profile containers redirect and persist user profiles in non-persistent virtual environments, replacing roaming profiles and folder redirection.
-- [Configure FSLogix profile containers with Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-profile-container-azure-files)  
+- [Configure FSLogix profile containers with Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/how-to-configure-profile-container-azure-files-active-directory)
   How to use Azure Files (SMB) as a storage backend for FSLogix profile containers, suitable for most small and medium deployments.
-- [Configure FSLogix profile containers with Azure NetApp Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-profile-container-netapp)  
+- [Configure FSLogix profile containers with Azure NetApp Files (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/how-to-configure-profile-container-netapp)
   How to use Azure NetApp Files for high-performance FSLogix profile storage in large deployments or latency-sensitive workloads.
-- [FSLogix Cloud Cache (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-cloud-cache)  
+- [FSLogix Cloud Cache (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-fslogix-cloud-cache)
   How to use FSLogix Cloud Cache to replicate profile containers across multiple storage locations for resilience and business continuity.
 - [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new)  
   Release notes and update history for FSLogix versions.
@@ -249,10 +249,10 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Guide to collecting and analyzing AVD diagnostics data in Azure Monitor and Log Analytics for alerting and custom queries.
 - [Diagnostic settings in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics)  
   How to enable and route AVD diagnostic logs to Log Analytics for custom querying and long-term retention.
-- [Monitor session host performance (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/performance-counters)  
-  Windows performance counters used on AVD session hosts for capacity planning and user experience monitoring.
-- [Set up alerts for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-alerts)  
-  How to create Azure Monitor alert rules that trigger on AVD-specific conditions such as connection failures and session host health changes.
+- [Azure Virtual Desktop Insights use cases (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights-use-cases)
+  How to use Azure Virtual Desktop Insights to review host performance, connection reliability, latency and client usage.
+- [Set up service alerts for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-service-alerts)
+  How to create Azure Service Health alerts for Azure Virtual Desktop service issues, health advisories and planned maintenance.
 
 ### Network
 
@@ -319,16 +319,16 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### Nerdio
 
-- [Nerdio Manager for Enterprise](https://getnerdio.com/nerdio-manager-for-enterprise/)  
+- [Nerdio Manager for Enterprise](https://getnerdio.com/nerdio-manager/enterprise/)
   Enterprise AVD management platform for automating host pool sizing, image management, cost optimization and session lifecycle from a single console.
-- [Nerdio Manager for Enterprise Documentation](https://nmehelp.getnerdio.com/hc/en-us/categories/19703475699853-Knowledge-Base)  
-  Official Nerdio documentation covering installation, configuration and day-to-day operations.
+- [Nerdio Resource Hub](https://getnerdio.com/resources/)
+  Official Nerdio resources covering deployment, automation and day-to-day operations.
 - [Nerdio Cost Estimator](https://getnerdio.com/cost-estimator/)  
   Tool to estimate compute cost savings achieved by adopting Nerdio Manager's autoscale and scheduling features versus managing AVD manually.
-- [Nerdio - AVD for Azure Local](https://nmehelp.getnerdio.com/hc/en-us/articles/25499377328909-AVD-for-Azure-Local-and-Nerdio-Manager)  
-  How to configure Nerdio to manage AVD session hosts running on Azure Local, including host pool provisioning and golden image management.
-- [Nerdio - Integrate existing AVD resources with Nerdio Manager](https://nmehelp.getnerdio.com/hc/en-us/articles/34054417281165-How-can-I-integrate-AVD-resources-provisioned-to-Azure-Local-Stack-HCI-with-Nerdio-Manager)  
-  Guide to onboard an existing AVD environment (including resources on Azure Local) into Nerdio Manager without redeploying.
+- [Nerdio - AVD for Azure Local](https://getnerdio.com/azure-local/)
+  Nerdio overview of Azure Local capabilities and how Nerdio Manager supports Azure Virtual Desktop on hybrid infrastructure.
+- [Nerdio - Azure Virtual Desktop for Hybrid Environments](https://getnerdio.com/avd-hybrid/)
+  Nerdio overview for managing Azure Virtual Desktop session hosts across hybrid infrastructure.
 
 #### ControlUp
 
@@ -418,9 +418,9 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   LinkedIn newsletter by [Michel Roth](https://www.linkedin.com/in/michelroth/) collecting weekly Windows 365, Azure Virtual Desktop and endpoint management news from Microsoft and community authors.
 - [AskAresh](https://askaresh.com/)
   Blog by Aresh Sarkari with hands-on AVD, Terraform, automation and end-user computing content frequently referenced by the AVD Community Newsletter.
-- [johanvanneuville.com](https://johanvanneuville.com/)
+- [johanvanneuville.com](https://johanvanneuville.com/category/avd/)
   Blog by MVP [Johan Vanneuville](https://www.linkedin.com/in/johan-vanneuville-64142b4b/) covering Azure Virtual Desktop, Windows 365, Nerdio and cloud endpoint security.
-- [christiaanbrinkhoff.com](https://www.christiaanbrinkhoff.com/)  
+- [christiaanbrinkhoff.com](https://christiaanbrinkhoff.com/)
   Blog by [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/), Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader, featuring cloud endpoint strategy, AVD, Windows 365 and community content.
 - [blog.itprocloud.de](https://blog.itprocloud.de/)  
   Blog by [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/) featuring AVD automation tools, Hydra technical deep dives and host pool management patterns.
@@ -430,8 +430,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Community blog by a group of AVD specialists covering a wide range of topics from initial deployment to advanced optimization and security.
 - [rozemuller.com](https://rozemuller.com/)  
   Blog by MVP [Sander Rozemuller](https://www.linkedin.com/in/sanderrozemuller/) focused on Azure Virtual Desktop automation using the REST API, PowerShell and infrastructure-as-code.
-- [imab.dk](https://imab.dk/)  
-  Blog by [Nicolaj Andersen](https://www.linkedin.com/in/nicolajandersen/) with practical AVD and Intune content focused on implementation and scripted automation.
+- [imab.dk](https://www.imab.dk/)
+  Blog by [Martin Bengtsson](https://www.linkedin.com/in/mwbengtsson/) with practical Intune, Microsoft 365 and PowerShell content focused on implementation and scripted automation.
 - [andrewstaylor.com](https://andrewstaylor.com/)
   Blog by Andrew Taylor covering Intune, FSLogix configuration without Group Policy, application packaging, AVD automation and EUC tooling.
 - [All about Endpoint Management](https://eskonr.com/)
@@ -444,8 +444,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Blog by Rudy Ooms focused on Intune internals, Windows Autopilot, Endpoint Privilege Management and endpoint troubleshooting.
 - [mikemdm.de](https://mikemdm.de/)  
   Blog by MVP [Michael Meier](https://www.linkedin.com/in/michael-meier-ba3b72210/) covering AVD and Azure Local labs and real-world implementations.
-- [jacquestheron.com](https://www.jacquestheron.com/)  
-  Blog by MVP [Jacques Theron](https://www.linkedin.com/in/jacquestheron/) with AVD and Microsoft 365 content covering deployment and management scenarios.
 - [joeyverlinden.com](https://joeyverlinden.com/)  
   Blog by [Joey Verlinden](https://www.linkedin.com/in/joeyverlinden/) featuring AVD implementation guides, FSLogix tips and automation scripts.
 - [msendpointmgr.com](https://msendpointmgr.com/)  
@@ -543,8 +541,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Free official Microsoft Learn path covering the core concepts and deployment tasks for Azure Virtual Desktop.
 - [Introduction to Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/m365-wvd-intro/)  
   Introductory module explaining the AVD service model, key components and use cases for organizations considering adoption.
-- [Deploy Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/deploy-azure-virtual-desktop/)  
-  Hands-on module walking through the steps to create a host pool, configure application groups and connect users to AVD.
+- [Create and configure host pools and session hosts for Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/create-configure-host-pools-session-hosts/)
+  Hands-on module covering host pool assignment, session hosts, RDP properties and Windows client licensing for AVD.
 
 ### Events
 
