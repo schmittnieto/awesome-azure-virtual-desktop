@@ -529,8 +529,12 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Web generator by Nicola Suter for building Intune PowerShell scripts that map network drives on Intune-managed Windows devices. The [GitHub repository](https://github.com/nicolonsky/IntuneDriveMapping) includes source code, documentation and examples for migrating existing Group Policy drive mappings or creating mappings from scratch.
 - [Envoy (GitHub)](https://github.com/j0eyv/Envoy)
   Open-source lightweight user environment manager by Joey Verlinden for Intune-managed Windows devices, useful in AVD and Windows 365 environments that need logon-time drive mappings, printer mappings, registry settings, file actions and shortcuts targeted by Microsoft Entra ID group membership.
+- [Intunewin Downloader (GitHub)](https://github.com/call4cloud-code/Intunewin-Downloader-Public)  
+  Windows troubleshooting tool by Rudy Ooms (Call4Cloud) that downloads and decrypts Win32 app packages and remediation scripts a device is already assigned in Microsoft Intune, without needing Graph API permissions or an app registration. Useful for inspecting and validating app delivery on AVD and Windows 365 session hosts from within the existing Intune enrollment context.
 - [AVD - FSLogix Profile Status (Tool)](https://www.linkedin.com/posts/drazen-nikolic-816906142_avd-microsoft-azurevirtualdesktop-ugcPost-7364022385827557376-NEle)  
   After the deprecation of FXTray, it became difficult to check the status of FSLogix profiles. With this PowerShell script, it is once again possible to verify profile status in a simple and centralized way. The [GitHub repository](https://github.com/DrazenNikolic/FSLogix-Profile-Status) contains the Profile Monitor for FSLogix source and releases.
+- [Profile Toolkit for FSLogix (GitHub)](https://github.com/DrazenNikolic/Profile-Toolkit-for-FSLogix/releases)  
+  GUI toolkit by Drazen Nikolic for enterprise FSLogix management, built with Electron and React. It covers real-time profile monitoring, profile migration, diagnostics, best practice assessment and advanced VDI operations, extending his earlier FSLogix Profile Status script into a full desktop application.
 - [AVD Sizing Guides (GitHub)](https://github.com/jonathan-vella/azure-local-sizing-guides)  
   Sizing guides for AVD and related services on Azure Local, maintained by Jonathan Vella (Microsoft Senior CSA).
 
