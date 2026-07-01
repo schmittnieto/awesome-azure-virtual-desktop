@@ -110,6 +110,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Eligible Windows, Microsoft 365 and Remote Desktop Services licenses for Azure Virtual Desktop deployments.
 - [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)  
   Security guidance for AVD deployments covering identity, networking, session security and data protection.
+- [Secure Boot Certificate Updates for Azure Virtual Desktop (Microsoft Support, KB5080931)](https://support.microsoft.com/en-us/topic/secure-boot-certificate-updates-for-azure-virtual-desktop-06a8a1bc-2510-4ead-9bea-3698e1d6b1db)  
+  Guidance for updating Secure Boot enabled session hosts and Azure Compute Gallery golden images to the 2023 certificates before the 2011 certificates expire in June 2026, covering inventory and monitoring options, automatic and IT-initiated deployment methods and known issues.
 - [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459)  
   Guidance on evaluating AVD environments with the Well-Architected Framework assessment to identify risks, measure maturity and improve architecture quality.
 
@@ -136,6 +138,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to use FSLogix Cloud Cache to replicate profile containers across multiple storage locations for resilience and business continuity.
 - [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new)  
   Release notes and update history for FSLogix versions.
+- [Action required: Windows Kerberos hardening (RC4) may affect FSLogix profiles on SMB storage (Microsoft Tech Community)](https://techcommunity.microsoft.com/blog/fslogix-blog/action-required-windows-kerberos-hardening-rc4-may-affect-fslogix-profiles-on-sm/4506378)  
+  Guidance on the April 2026 Windows Kerberos hardening change that defaults unset AD object encryption to AES-SHA1 instead of RC4, which can break FSLogix profile authentication on SMB storage integrated with Active Directory unless service accounts and AD objects are updated to support AES-SHA1 before enforcement completes in July 2026.
 
 ### Azure Files
 
