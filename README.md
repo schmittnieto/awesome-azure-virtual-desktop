@@ -9,6 +9,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 ## Table of Contents
 
 - [Official](#official)
+  - [Important Announcements](#important-announcements)
   - [What's new in Azure Virtual Desktop?](#whats-new-in-azure-virtual-desktop)
   - [Azure Virtual Desktop](#azure-virtual-desktop)
   - [Azure Virtual Desktop Hybrid and Azure Local](#azure-virtual-desktop-hybrid-and-azure-local)
@@ -50,11 +51,15 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 ## Official
 *Only official links published or maintained by Microsoft or Azure.*
 
+### Important Announcements
+
+> ⚠️ **The Microsoft Entra ID `memberOf` operator preview ends on 3 November 2026.** After that date, dynamic membership groups, dynamic administrative units and entitlement management auto-assignment policies that use `memberOf` stop updating and stay at their last state. Many Azure Virtual Desktop, Windows 365 and Intune assignments rely on these groups, so review and migrate the affected rules before October 2026. More info: [Configure dynamic membership groups with the memberOf operator (preview)](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-member-of).
+
 ### What's new in Azure Virtual Desktop
 
 [What's new in Azure Virtual Desktop?](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new)
 
-Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from July 2025 onward.
+Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from August 2025 onward.
 
 #### Autoscale and Host Pool Management
 - **Automated host pools** *(GA: June 2026)* - using a single session host configuration to automatically enforce settings across all session hosts in a pool, updated by editing the configuration instead of each host individually.
@@ -70,7 +75,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - **Enhanced RemoteApps** *(Preview: November 2025)* - improving RemoteApp behavior with better Windows Snap support, full-screen mode, DPI handling and visual integration with Windows.
 
 #### Security and Compliance
-- **Select redirections disabled for new host pools** *(July 2025)* - disabling clipboard, drive, opaque low-level USB and printer redirections by default for newly created host pools.
 - **Context-based redirections** *(Public preview: June 2026)* - dynamically controlling clipboard, printer, drive and low-level USB redirection based on user identity, device compliance and network conditions, extending server-side policy enforcement for BYOD scenarios.
 - **Token protection support in Windows App on Windows devices** *(GA: August 2025)* - allowing Conditional Access policies to require sign-in tokens that can only be used from the intended device.
 - **External identity support** *(Preview without FSLogix: September 2025; GA: November 2025; Windows App for US Government GA and macOS/Android preview: April 2026)* - allowing external identities to access Azure Virtual Desktop resources with expanded client support.
@@ -81,6 +85,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 #### Client Experience
 - **Global expansion of TURN Relay** *(GA: September 2025)* - expanding the TURN relay service to 39 Azure regions with a dedicated IP range, improving RDP Shortpath for Public Networks performance and reliability.
 - **Microsoft Teams media optimization** *(WebRTC-based Teams GA and macOS preview: March 2026)* - reducing latency and improving call quality for meetings running inside AVD sessions through newer optimization architectures.
+- **Modern Auto-Reconnect** *(Public preview: August 2026)* - preserving session state during temporary network interruptions and automatically restoring connectivity when network conditions improve, powered by RDP Multipath for faster recovery and fewer user-visible disruptions than the traditional reconnect model.
 
 ### Azure Virtual Desktop
 
