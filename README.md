@@ -53,11 +53,11 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 
 ### Important Announcements
 
-> ⚠️ **The Microsoft Entra ID `memberOf` operator preview ends on 3 November 2026.** After that date, dynamic membership groups, dynamic administrative units and entitlement management auto-assignment policies that use `memberOf` stop updating and stay at their last state. Many Azure Virtual Desktop, Windows 365 and Intune assignments rely on these groups, so review and migrate the affected rules before October 2026. More info: [Configure dynamic membership groups with the memberOf operator (preview)](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-member-of).
+> ⚠️ **The Microsoft Entra ID `memberOf` operator preview ends on 3 November 2026.** After that date, dynamic membership groups, dynamic administrative units and entitlement management auto-assignment policies that use `memberOf` stop updating and stay at their last state. Many Azure Virtual Desktop, Windows 365 and Intune assignments rely on these groups, so review and migrate the affected rules before October 2026. More info: [Configure dynamic membership groups with the memberOf operator (preview)](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-member-of?wt.mc_id=MVP_579217).
 
 ### What's new in Azure Virtual Desktop
 
-[What's new in Azure Virtual Desktop?](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new)
+[What's new in Azure Virtual Desktop?](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new?wt.mc_id=MVP_579217)
 
 Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from August 2025 onward.
 
@@ -89,100 +89,100 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### Azure Virtual Desktop
 
-- [Azure Virtual Desktop Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/)  
+- [Azure Virtual Desktop Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/?wt.mc_id=MVP_579217)  
   Complete documentation for deploying and managing Azure Virtual Desktop.
 - [Azure Virtual Desktop Product Page](https://azure.microsoft.com/en-us/products/virtual-desktop/)  
   Official product page for Azure Virtual Desktop on the Azure website.
-- [What's new in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new)  
+- [What's new in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new?wt.mc_id=MVP_579217)  
   Monthly updates listing the latest features and improvements in Azure Virtual Desktop.
 - [Azure Virtual Desktop Pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-desktop/)  
   Overview of the per-user access pricing model and session host virtual machine costs.
-- [Prerequisites for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/prerequisites)  
+- [Prerequisites for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/prerequisites?wt.mc_id=MVP_579217)  
   Network, identity and subscription requirements before deploying Azure Virtual Desktop.
-- [Create a host pool (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-host-pool)  
+- [Create a host pool (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-host-pool?wt.mc_id=MVP_579217)  
   Step-by-step guide to creating pooled or personal host pools in Azure Virtual Desktop.
-- [Autoscale for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-scaling-plan)  
+- [Autoscale for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-scaling-plan?wt.mc_id=MVP_579217)  
   How to configure scaling plans to automatically start and stop session hosts based on demand, reducing compute costs.
-- [Personal desktop assignment (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type)
+- [Personal desktop assignment (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type?wt.mc_id=MVP_579217)
   How to configure automatic or direct assignment for personal desktops, including multiple personal desktops per user.
-- [RemoteApp streaming (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/publish-applications-stream-remoteapp)  
+- [RemoteApp streaming (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/publish-applications-stream-remoteapp?wt.mc_id=MVP_579217)  
   How to publish individual applications instead of full desktops using RemoteApp, reducing bandwidth and simplifying the user experience.
-- [Watermarking in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/watermarking)  
+- [Watermarking in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/watermarking?wt.mc_id=MVP_579217)  
   How to enable QR-code watermarks in RDP sessions to deter and trace unauthorized screen captures.
-- [Screen capture protection (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/screen-capture-protection)  
+- [Screen capture protection (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/screen-capture-protection?wt.mc_id=MVP_579217)  
   Policy that prevents client-side tools from capturing session content, relevant for regulated industries.
-- [Licensing Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/licensing)
+- [Licensing Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/licensing?wt.mc_id=MVP_579217)
   Eligible Windows, Microsoft 365 and Remote Desktop Services licenses for Azure Virtual Desktop deployments.
-- [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide)  
+- [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide?wt.mc_id=MVP_579217)  
   Security guidance for AVD deployments covering identity, networking, session security and data protection.
 - [Secure Boot Certificate Updates for Azure Virtual Desktop (Microsoft Support, KB5080931)](https://support.microsoft.com/en-us/topic/secure-boot-certificate-updates-for-azure-virtual-desktop-06a8a1bc-2510-4ead-9bea-3698e1d6b1db)  
   Guidance for updating Secure Boot enabled session hosts and Azure Compute Gallery golden images to the 2023 certificates before the 2011 certificates expire in June 2026, covering inventory and monitoring options, automatic and IT-initiated deployment methods and known issues.
-- [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459)  
+- [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459?wt.mc_id=MVP_579217)  
   Guidance on evaluating AVD environments with the Well-Architected Framework assessment to identify risks, measure maturity and improve architecture quality.
 
 ### Azure Virtual Desktop Hybrid and Azure Local
 
-- [Azure Virtual Desktop Hybrid Overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/hybrid-overview)  
+- [Azure Virtual Desktop Hybrid Overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/hybrid-overview?wt.mc_id=MVP_579217)  
   Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server. It is in public preview with validation host pools only and does not support Windows 10 or Windows 11 Enterprise multi-session.
-- [Azure Virtual Desktop on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview)  
+- [Azure Virtual Desktop on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217)  
   Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images.
 - [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
   Companion curated list for Azure Local with a dedicated Azure Virtual Desktop section covering deployment, management tooling and community resources for running AVD on Azure Local.
 
 ### FSLogix
 
-- [FSLogix Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/)  
+- [FSLogix Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/?wt.mc_id=MVP_579217)  
   Complete documentation for FSLogix profile and Office container solutions, now part of Microsoft 365.
-- [FSLogix profile containers with Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/fslogix-profile-containers)
+- [FSLogix profile containers with Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/fslogix-profile-containers?wt.mc_id=MVP_579217)
   How FSLogix profile containers redirect and persist user profiles in non-persistent virtual environments, replacing roaming profiles and folder redirection.
-- [Configure FSLogix profile containers with Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/how-to-configure-profile-container-azure-files-active-directory)
+- [Configure FSLogix profile containers with Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/how-to-configure-profile-container-azure-files-active-directory?wt.mc_id=MVP_579217)
   How to use Azure Files (SMB) as a storage backend for FSLogix profile containers, suitable for most small and medium deployments.
-- [Configure FSLogix profile containers with Azure NetApp Files (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/how-to-configure-profile-container-netapp)
+- [Configure FSLogix profile containers with Azure NetApp Files (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/how-to-configure-profile-container-netapp?wt.mc_id=MVP_579217)
   How to use Azure NetApp Files for high-performance FSLogix profile storage in large deployments or latency-sensitive workloads.
-- [FSLogix Cloud Cache (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-fslogix-cloud-cache)
+- [FSLogix Cloud Cache (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-fslogix-cloud-cache?wt.mc_id=MVP_579217)
   How to use FSLogix Cloud Cache to replicate profile containers across multiple storage locations for resilience and business continuity.
-- [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new)  
+- [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new?wt.mc_id=MVP_579217)  
   Release notes and update history for FSLogix versions.
-- [Action required: Windows Kerberos hardening (RC4) may affect FSLogix profiles on SMB storage (Microsoft Tech Community)](https://techcommunity.microsoft.com/blog/fslogix-blog/action-required-windows-kerberos-hardening-rc4-may-affect-fslogix-profiles-on-sm/4506378)  
+- [Action required: Windows Kerberos hardening (RC4) may affect FSLogix profiles on SMB storage (Microsoft Tech Community)](https://techcommunity.microsoft.com/blog/fslogix-blog/action-required-windows-kerberos-hardening-rc4-may-affect-fslogix-profiles-on-sm/4506378?wt.mc_id=MVP_579217)  
   Guidance on the April 2026 Windows Kerberos hardening change that defaults unset AD object encryption to AES-SHA1 instead of RC4, which can break FSLogix profile authentication on SMB storage integrated with Active Directory unless service accounts and AD objects are updated to support AES-SHA1 before enforcement completes in July 2026.
 
 ### Azure Files
 
-- [Azure Files Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/)
+- [Azure Files Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/?wt.mc_id=MVP_579217)
   Documentation hub for Azure Files, the managed SMB file share service commonly used as FSLogix profile container storage for AVD.
-- [Overview of Azure Files identity-based authentication for SMB access (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview)
+- [Overview of Azure Files identity-based authentication for SMB access (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview?wt.mc_id=MVP_579217)
   Overview of identity-based access for Azure Files over SMB, including share-level, directory-level and file-level permission models.
-- [Enable Microsoft Entra Kerberos authentication for hybrid and cloud-only identities on Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal%2Cintune)
+- [Enable Microsoft Entra Kerberos authentication for hybrid and cloud-only identities on Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal%2Cintune&wt.mc_id=MVP_579217)
   How to enable Kerberos authentication for Azure Files with hybrid identities and cloud-only identities in preview, useful for FSLogix profile containers on Entra-joined AVD session hosts.
-- [Assign share-level permissions for Azure file shares (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-assign-share-level-permissions)
+- [Assign share-level permissions for Azure file shares (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-assign-share-level-permissions?wt.mc_id=MVP_579217)
   How to grant SMB access with Azure RBAC roles or default share-level permissions, including the default permission model required for cloud-only identities in preview.
-- [Configure directory and file-level permissions for Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-configure-file-level-permissions)
+- [Configure directory and file-level permissions for Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-configure-file-level-permissions?wt.mc_id=MVP_579217)
   How to configure Windows ACLs for Azure file shares, including differences between hybrid identities and cloud-only identities when using Microsoft Entra Kerberos.
 - [Entra-only identities for Azure Files SMB now generally available (Azure Blog)](https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/)
   Announcement of the general availability (May 19, 2026) of Microsoft Entra-only identities for Azure Files SMB, enabling identity-based access to SMB file shares using cloud-only Entra ID accounts without on-premises Active Directory, which is directly relevant to FSLogix profile containers on Entra-joined AVD session hosts.
 
 ### App Attach
 
-- [App Attach overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-overview)  
+- [App Attach overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-overview?wt.mc_id=MVP_579217)  
   Introduction to App Attach, which allows MSIX, Appx and App-V packages to be staged and delivered dynamically to AVD session hosts without installation.
-- [Set up App Attach (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-setup)  
+- [Set up App Attach (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-setup?wt.mc_id=MVP_579217)  
   Step-by-step guide to configuring App Attach in the Azure portal, including image storage in Azure Files and assignment to host pools.
-- [MSIX Packaging Tool (Microsoft Docs)](https://learn.microsoft.com/en-us/windows/msix/packaging-tool/tool-overview)  
+- [MSIX Packaging Tool (Microsoft Docs)](https://learn.microsoft.com/en-us/windows/msix/packaging-tool/tool-overview?wt.mc_id=MVP_579217)  
   Documentation for the MSIX Packaging Tool used to convert existing application installers to MSIX format for use with App Attach.
-- [Test MSIX App Attach packages (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-test-msix-packages)  
+- [Test MSIX App Attach packages (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/app-attach-test-msix-packages?wt.mc_id=MVP_579217)  
   How to validate MSIX packages before deploying them through App Attach to avoid session host issues.
 
 ### Windows App
 
-- [Windows App Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/)  
+- [Windows App Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/?wt.mc_id=MVP_579217)  
   Documentation for Windows App, the unified Microsoft client for Azure Virtual Desktop, Windows 365 and Remote Desktop Services.
-- [Get started with Windows App on Windows (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps)  
+- [Get started with Windows App on Windows (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?wt.mc_id=MVP_579217)  
   How to install and connect to Azure Virtual Desktop resources using Windows App on Windows.
-- [Windows App on macOS (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?pivots=macos)  
+- [Windows App on macOS (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/get-started-connect-devices-desktops-apps?pivots=macos&wt.mc_id=MVP_579217)  
   How to use Windows App to access AVD on macOS devices.
-- [Compare Windows App features across platforms and devices (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/compare-platforms-features?pivots=azure-virtual-desktop)
+- [Compare Windows App features across platforms and devices (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/compare-platforms-features?pivots=azure-virtual-desktop&wt.mc_id=MVP_579217)
   Feature matrix comparing Windows App support for Azure Virtual Desktop across Windows, macOS, iOS, iPadOS, Android, Chrome OS, web browsers and Meta Quest.
-- [What's new in Windows App (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/whats-new)  
+- [What's new in Windows App (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-app/whats-new?wt.mc_id=MVP_579217)  
   Release notes and changelogs for the Windows App client across all supported platforms, including public release downloads for Windows outside of the Microsoft Store.
   - [Windows App public release download - Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2262633)
     Direct Windows App installer for 64-bit Windows devices outside of the Microsoft Store.
@@ -193,122 +193,122 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### Windows 365
 
-- [Windows 365 Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/)
+- [Windows 365 Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/?wt.mc_id=MVP_579217)
   Documentation hub for Windows 365, Microsoft's Cloud PC service for streaming personalized Windows desktops from the Microsoft Cloud.
-- [What is Windows 365? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/overview)
+- [What is Windows 365? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/overview?wt.mc_id=MVP_579217)
   Overview of Windows 365 editions, Cloud PC concepts, licensing and access options including Windows App, the web client and Windows 365 Link.
-- [Windows 365 Enterprise and Frontline Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/)
+- [Windows 365 Enterprise and Frontline Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/?wt.mc_id=MVP_579217)
   Documentation for planning, provisioning, managing and securing Cloud PCs with Microsoft Intune.
-- [Windows 365 Business Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/business/)
+- [Windows 365 Business Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/business/?wt.mc_id=MVP_579217)
   Documentation for smaller organizations using Windows 365 Business Cloud PCs with streamlined setup and management.
-- [Windows 365 requirements (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements)
+- [Windows 365 requirements (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements?wt.mc_id=MVP_579217)
   Identity, licensing, Intune, Azure and role requirements for Windows 365 Enterprise, Frontline and Government deployments.
-- [Provisioning in Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/provisioning)
+- [Provisioning in Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/provisioning?wt.mc_id=MVP_579217)
   Overview of the automated process that creates, configures and assigns Cloud PCs to licensed users.
-- [Create provisioning policies (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/create-provisioning-policy)
+- [Create provisioning policies (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/create-provisioning-policy?wt.mc_id=MVP_579217)
   How to define the rules Windows 365 uses to provision Cloud PCs for assigned Microsoft Entra groups.
-- [Access a Cloud PC (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/end-user-access-cloud-pc)
+- [Access a Cloud PC (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/end-user-access-cloud-pc?wt.mc_id=MVP_579217)
   Supported client and browser options for users connecting to Windows 365 Cloud PCs.
-- [Windows 365 Azure network connection (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection)
+- [Windows 365 Azure network connection (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection?wt.mc_id=MVP_579217)
   Architecture guidance for connecting Windows 365 Cloud PCs to customer-managed Azure networks and on-premises resources.
-- [What's new in Windows 365 Enterprise and Frontline (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new)
+- [What's new in Windows 365 Enterprise and Frontline (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new?wt.mc_id=MVP_579217)
   Release notes for Windows 365 Enterprise and Frontline features, updates and service improvements.
 
 ### Windows 365 Link
 
-- [Windows 365 Link Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/)
+- [Windows 365 Link Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/?wt.mc_id=MVP_579217)
   Documentation hub for Windows 365 Link, Microsoft's purpose-built Cloud PC hardware device.
-- [What is Windows 365 Link? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/overview)
+- [What is Windows 365 Link? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/overview?wt.mc_id=MVP_579217)
   Overview of the secure Cloud PC device experience, hardware concept, Intune management model and core requirements.
-- [Windows 365 Link deployment overview (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/deployment-overview)
+- [Windows 365 Link deployment overview (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/deployment-overview?wt.mc_id=MVP_579217)
   Admin guidance for preparing Microsoft Entra ID, Intune enrollment, filters and Conditional Access before onboarding devices.
-- [Requirements for Windows 365 Link deployment (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/requirements)
+- [Requirements for Windows 365 Link deployment (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/requirements?wt.mc_id=MVP_579217)
   Licensing, Microsoft Entra ID, Intune and Windows 365 single sign-on requirements for deploying Windows 365 Link devices.
-- [Set up your Windows 365 Link and sign in (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/setup)
+- [Set up your Windows 365 Link and sign in (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/setup?wt.mc_id=MVP_579217)
   First-run setup flow for users connecting Windows 365 Link to their work or school account and Cloud PC.
-- [Sign in to, sign out, or lock your Windows 365 Link (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/sign-in)
+- [Sign in to, sign out, or lock your Windows 365 Link (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/sign-in?wt.mc_id=MVP_579217)
   User guidance for daily sign-in, sign-out and lock workflows on Windows 365 Link.
-- [What's new in Windows 365 Link (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/whats-new)
+- [What's new in Windows 365 Link (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/link/whats-new?wt.mc_id=MVP_579217)
   Release notes for Windows 365 Link builds, product improvements and device updates.
 
 ### Microsoft Intune
 
-- [Microsoft Intune Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/mem/intune/)
+- [Microsoft Intune Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/mem/intune/?wt.mc_id=MVP_579217)
   Documentation hub for Microsoft Intune endpoint management, app management, endpoint security and device compliance.
-- [Manage the operating system of Azure Virtual Desktop session hosts (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/management)
+- [Manage the operating system of Azure Virtual Desktop session hosts (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/management?wt.mc_id=MVP_579217)
   Overview of using Microsoft Intune or Configuration Manager to manage Azure Virtual Desktop session hosts.
-- [Using Azure Virtual Desktop single-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop)
+- [Using Azure Virtual Desktop single-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop?wt.mc_id=MVP_579217)
   How to manage personal desktop session hosts with Intune policy, apps, compliance policy and Conditional Access.
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop-multi-session)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop-multi-session?wt.mc_id=MVP_579217)
   How to manage Windows Enterprise multi-session session hosts using device-scope and user-scope Intune policies.
-- [Use the Intune settings catalog (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/configuration/settings-catalog)
+- [Use the Intune settings catalog (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/configuration/settings-catalog?wt.mc_id=MVP_579217)
   How to create granular configuration profiles with device and user scope settings, including Windows Enterprise multi-session filters.
-- [Intune security baselines (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-security/security-baselines/overview)
+- [Intune security baselines (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-security/security-baselines/overview?wt.mc_id=MVP_579217)
   Overview of Intune security baseline profiles for Windows devices and endpoint security configuration.
-- [Windows App deployment by using Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-windows-10-app-deploy)
+- [Windows App deployment by using Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-windows-10-app-deploy?wt.mc_id=MVP_579217)
   How to deploy Windows applications with Intune, including app assignment and Windows app deployment behavior.
-- [Configure clipboard redirection with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/redirection-configure-clipboard?tabs=intune)
+- [Configure clipboard redirection with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/redirection-configure-clipboard?tabs=intune&wt.mc_id=MVP_579217)
   How to configure clipboard redirection for Azure Virtual Desktop session hosts using Intune settings catalog or Group Policy.
-- [Manage Windows Update ring policies with Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-updates/windows/update-rings)
+- [Manage Windows Update ring policies with Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-updates/windows/update-rings?wt.mc_id=MVP_579217)
   How Windows Update ring policies define update behavior for Windows devices; for AVD multi-session, use supported Windows Update settings in the Settings catalog.
 
 ### Monitoring and Insights
 
-- [Azure Virtual Desktop Insights (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights)  
+- [Azure Virtual Desktop Insights (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights?wt.mc_id=MVP_579217)  
   How to use AVD Insights, an Azure Monitor workbook, to monitor session host health, user connections and resource consumption from a single view.
-- [Use Azure Monitor for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-monitor)  
+- [Use Azure Monitor for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-monitor?wt.mc_id=MVP_579217)  
   Guide to collecting and analyzing AVD diagnostics data in Azure Monitor and Log Analytics for alerting and custom queries.
-- [Diagnostic settings in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics)  
+- [Diagnostic settings in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics?wt.mc_id=MVP_579217)  
   How to enable and route AVD diagnostic logs to Log Analytics for custom querying and long-term retention.
-- [Azure Virtual Desktop Insights use cases (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights-use-cases)
+- [Azure Virtual Desktop Insights use cases (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights-use-cases?wt.mc_id=MVP_579217)
   How to use Azure Virtual Desktop Insights to review host performance, connection reliability, latency and client usage.
-- [Set up service alerts for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-service-alerts)
+- [Set up service alerts for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-service-alerts?wt.mc_id=MVP_579217)
   How to create Azure Service Health alerts for Azure Virtual Desktop service issues, health advisories and planned maintenance.
 
 ### Network
 
-- [Network connectivity in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/network-connectivity)  
+- [Network connectivity in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/network-connectivity?wt.mc_id=MVP_579217)  
   Explains how RDP Shortpath, reverse connect transport and the AVD Gateway work together, with guidance for optimizing network paths.
-- [RDP Shortpath for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rdp-shortpath)  
+- [RDP Shortpath for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rdp-shortpath?wt.mc_id=MVP_579217)  
   How to enable direct UDP-based connectivity between clients and session hosts to reduce latency and improve session quality.
-- [Private Link for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-overview)  
+- [Private Link for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-overview?wt.mc_id=MVP_579217)  
   Overview of using Azure Private Link to route AVD control plane and session traffic over private networks, removing the need for public internet exposure.
-- [Set up Private Link with Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-setup)  
+- [Set up Private Link with Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/private-link-setup?wt.mc_id=MVP_579217)  
   Step-by-step guide to creating private endpoints for the AVD feed, connection and global discovery, including the private DNS zones required for name resolution.
-- [Azure Private Endpoint private DNS zone values (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns)  
+- [Azure Private Endpoint private DNS zone values (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns?wt.mc_id=MVP_579217)  
   Reference of the recommended private DNS zone names for Azure services that support private endpoints, including the `privatelink.wvd.microsoft.com` and `privatelink-global.wvd.microsoft.com` zones used by Azure Virtual Desktop.
-- [Required FQDNs and endpoints for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/required-fqdn-endpoint)  
+- [Required FQDNs and endpoints for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/required-fqdn-endpoint?wt.mc_id=MVP_579217)  
   List of FQDNs and endpoints that session hosts and clients must be able to reach for Azure Virtual Desktop to deploy and connect, grouped by session host virtual machines and end user devices.
-- [Check access to required FQDNs and endpoints for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/check-access-validate-required-fqdn-endpoint)  
+- [Check access to required FQDNs and endpoints for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/check-access-validate-required-fqdn-endpoint?wt.mc_id=MVP_579217)  
   How to run the Azure Virtual Desktop Agent URL Tool on a session host to validate that all required FQDNs and endpoints are reachable.
-- [Use Azure Firewall to protect Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/firewall/protect-azure-virtual-desktop)  
+- [Use Azure Firewall to protect Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/firewall/protect-azure-virtual-desktop?wt.mc_id=MVP_579217)  
   How to filter session host outbound traffic with Azure Firewall using the `WindowsVirtualDesktop` FQDN tag and service tag, including a sample policy from the RDS-Templates repository.
-- [Azure service tags overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview)  
+- [Azure service tags overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-network/service-tags-overview?wt.mc_id=MVP_579217)  
   How service tags group Azure service IP ranges so they can be used in network security group rules, Azure Firewall and user-defined routes instead of maintaining IP lists manually.
-- [Network endpoints for Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/fundamentals/endpoints)  
+- [Network endpoints for Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/fundamentals/endpoints?wt.mc_id=MVP_579217)  
   Consolidated list of IP addresses, FQDNs and ports that Intune-managed devices need through firewalls and proxies, relevant when managing AVD session hosts and Cloud PCs with Intune.
-- [Network requirements for Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements-network)  
+- [Network requirements for Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements-network?wt.mc_id=MVP_579217)  
   Virtual network, DNS, service URL and port requirements for provisioning and connecting to Windows 365 Cloud PCs on a customer-managed Azure network.
-- [Microsoft 365 URLs and IP address ranges (Microsoft Docs)](https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges)  
+- [Microsoft 365 URLs and IP address ranges (Microsoft Docs)](https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?wt.mc_id=MVP_579217)  
   Authoritative list of Microsoft 365 endpoints, including Microsoft Entra ID and Office 365, that AVD session hosts and clients often need to reach in restricted networks.
 
 ### Architecture and Best Practices
 
-- [Azure Virtual Desktop Landing Zone Accelerator (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone)  
+- [Azure Virtual Desktop Landing Zone Accelerator (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone?wt.mc_id=MVP_579217)  
   Enterprise-scale reference implementation for Azure Virtual Desktop following the Cloud Adoption Framework landing zone model, with Bicep and Terraform modules.
-- [Cloud Adoption Framework for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/)  
+- [Cloud Adoption Framework for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/?wt.mc_id=MVP_579217)  
   Strategic and technical guidance for adopting AVD across strategy, planning, readiness, migration and governance phases.
-- [Azure Well-Architected Framework for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/well-architected/azure-virtual-desktop/)  
+- [Azure Well-Architected Framework for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/well-architected/azure-virtual-desktop/?wt.mc_id=MVP_579217)  
   Guidance aligned with the five pillars of the Well-Architected Framework applied specifically to AVD deployments.
-- [Azure Virtual Desktop reference architecture (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop)  
+- [Azure Virtual Desktop reference architecture (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop?wt.mc_id=MVP_579217)  
   Reference architecture for a standard multi-session AVD deployment including networking, identity and storage components.
-- [Multi-region BCDR for Azure Virtual Desktop (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr)  
+- [Multi-region BCDR for Azure Virtual Desktop (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr?wt.mc_id=MVP_579217)  
   Architecture for deploying AVD across multiple Azure regions to meet business continuity and disaster recovery requirements.
-- [Image lifecycle management for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-golden-image)  
+- [Image lifecycle management for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-golden-image?wt.mc_id=MVP_579217)  
   Guidance on building and maintaining golden images (session host templates) using Azure Compute Gallery and Azure Image Builder.
-- [Azure Image Builder overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-machines/image-builder-overview)  
+- [Azure Image Builder overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-machines/image-builder-overview?wt.mc_id=MVP_579217)  
   Overview of the Azure Image Builder service used to automate the creation and distribution of custom AVD session host images.
-- [RBAC for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rbac)  
+- [RBAC for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/rbac?wt.mc_id=MVP_579217)  
   Overview of built-in roles and how to delegate management tasks across operations, helpdesk and infrastructure teams in AVD.
 
 ### GitHub Repositories
@@ -549,20 +549,20 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### Chats and Channels
 
-- [Azure Virtual Desktop Tech Community (Microsoft)](https://techcommunity.microsoft.com/category/AzureVirtualDesktop)  
+- [Azure Virtual Desktop Tech Community (Microsoft)](https://techcommunity.microsoft.com/category/AzureVirtualDesktop?wt.mc_id=MVP_579217)  
   Official Microsoft Tech Community space for Azure Virtual Desktop announcements, Q&A and community discussions moderated by the product team.
 - [AVD Community User Groups](https://avdcommunity.com/user-groups/)
   Community hub for Azure Virtual Desktop user groups and newsletter-driven community updates.
 
 ### Trainings
 
-- [AZ-140: Configuring and Operating Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/credentials/certifications/azure-virtual-desktop-specialty/)  
+- [AZ-140: Configuring and Operating Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/credentials/certifications/azure-virtual-desktop-specialty/?wt.mc_id=MVP_579217)  
   Official Microsoft certification exam covering AVD deployment, configuration, access management, monitoring and performance optimization.
-- [Deliver remote desktops and apps from Azure with Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/paths/m365-wvd/)  
+- [Deliver remote desktops and apps from Azure with Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/paths/m365-wvd/?wt.mc_id=MVP_579217)  
   Free official Microsoft Learn path covering the core concepts and deployment tasks for Azure Virtual Desktop.
-- [Introduction to Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/m365-wvd-intro/)  
+- [Introduction to Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/m365-wvd-intro/?wt.mc_id=MVP_579217)  
   Introductory module explaining the AVD service model, key components and use cases for organizations considering adoption.
-- [Create and configure host pools and session hosts for Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/create-configure-host-pools-session-hosts/)
+- [Create and configure host pools and session hosts for Azure Virtual Desktop (Microsoft Learn)](https://learn.microsoft.com/en-us/training/modules/create-configure-host-pools-session-hosts/?wt.mc_id=MVP_579217)
   Hands-on module covering host pool assignment, session hosts, RDP properties and Windows client licensing for AVD.
 
 ### Events
