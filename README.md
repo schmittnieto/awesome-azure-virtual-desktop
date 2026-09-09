@@ -67,7 +67,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - **Ephemeral OS disk support** *(Public preview: October 2025; GA: June 2026)* - enabling stateless session hosts to use local VM storage for faster provisioning, reimaging and performance.
 - **Managed identity support for session host configuration** *(validation host pools: August 2025; all host pools: September 2025)* - removing the need to assign permissions to the Azure Virtual Desktop service principal when creating and updating session hosts.
 - **RDP Multipath** *(GA and fully rolled out: July 2025; enhanced session resilience preview: April 2026; redundant TCP GA rollout: May 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
-- **Azure Virtual Desktop for hybrid environments with Arc-enabled servers** *(Public preview: May 2026)* - allowing session hosts to run on any hypervisor or bare-metal Windows Server through the Azure Arc extension, without VM provisioning or power management in this preview.
+- **Azure Virtual Desktop for hybrid environments with Arc-enabled servers** *(Public preview: May 2026; GA: September 2026)* - allowing session hosts to run on any hypervisor or bare-metal Windows Server through the Azure Arc extension, without VM provisioning or power management.
 
 #### App Delivery and Profile Management
 - **App Attach** *(Windows Server 2025 and 2022 support: April 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
@@ -91,11 +91,11 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [Azure Virtual Desktop Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/?wt.mc_id=MVP_579217)  
   Complete documentation for deploying and managing Azure Virtual Desktop.
-- [Azure Virtual Desktop Product Page](https://azure.microsoft.com/en-us/products/virtual-desktop/)  
+- [Azure Virtual Desktop Product Page](https://azure.microsoft.com/en-us/products/virtual-desktop/?wt.mc_id=MVP_579217)  
   Official product page for Azure Virtual Desktop on the Azure website.
 - [What's new in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new?wt.mc_id=MVP_579217)  
   Monthly updates listing the latest features and improvements in Azure Virtual Desktop.
-- [Azure Virtual Desktop Pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-desktop/)  
+- [Azure Virtual Desktop Pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-desktop/?wt.mc_id=MVP_579217)  
   Overview of the per-user access pricing model and session host virtual machine costs.
 - [Prerequisites for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/prerequisites?wt.mc_id=MVP_579217)  
   Network, identity and subscription requirements before deploying Azure Virtual Desktop.
@@ -123,7 +123,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 ### Azure Virtual Desktop Hybrid and Azure Local
 
 - [Azure Virtual Desktop Hybrid Overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/hybrid-overview?wt.mc_id=MVP_579217)  
-  Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server. It is in public preview with validation host pools only and does not support Windows 10 or Windows 11 Enterprise multi-session.
+  Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server through Azure Arc. Generally available since September 2026, it does not support Windows 10 or Windows 11 Enterprise multi-session.
 - [Azure Virtual Desktop on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217)  
   Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images.
 - [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
@@ -158,7 +158,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to grant SMB access with Azure RBAC roles or default share-level permissions, including the default permission model required for cloud-only identities in preview.
 - [Configure directory and file-level permissions for Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-configure-file-level-permissions?wt.mc_id=MVP_579217)
   How to configure Windows ACLs for Azure file shares, including differences between hybrid identities and cloud-only identities when using Microsoft Entra Kerberos.
-- [Entra-only identities for Azure Files SMB now generally available (Azure Blog)](https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/)
+- [Entra-only identities for Azure Files SMB now generally available (Azure Blog)](https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/?wt.mc_id=MVP_579217)
   Announcement of the general availability (May 19, 2026) of Microsoft Entra-only identities for Azure Files SMB, enabling identity-based access to SMB file shares using cloud-only Entra ID accounts without on-premises Active Directory, which is directly relevant to FSLogix profile containers on Entra-joined AVD session hosts.
 
 ### App Attach
