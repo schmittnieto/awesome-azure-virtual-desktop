@@ -126,6 +126,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server through Azure Arc. Generally available since September 2026, it does not support Windows 10 or Windows 11 Enterprise multi-session.
 - [Azure Virtual Desktop on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217)  
   Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images.
+- [Microsoft Entra only join for AVD on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217#limitations)  
+  AVD session hosts on Azure Local support native Microsoft Entra join, removing the need for an AD DS domain. Deploy these session hosts through PowerShell or other automated methods, since the AVD portal only adds session hosts to an AD DS domain.
 - [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
   Companion curated list for Azure Local with a dedicated Azure Virtual Desktop section covering deployment, management tooling and community resources for running AVD on Azure Local.
 
