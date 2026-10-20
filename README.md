@@ -448,14 +448,10 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Blog by Aresh Sarkari with hands-on AVD, Terraform, automation and end-user computing content frequently referenced by the AVD Community Newsletter.
 - [johanvanneuville.com](https://johanvanneuville.com/category/avd/)
   Blog by MVP [Johan Vanneuville](https://www.linkedin.com/in/johan-vanneuville-64142b4b/) covering Azure Virtual Desktop, Windows 365, Nerdio and cloud endpoint security.
-- [christiaanbrinkhoff.com](https://christiaanbrinkhoff.com/)
-  Blog by [Christiaan Brinkhoff](https://www.linkedin.com/in/christiaanbrinkhoff/), Senior Director of Product R&D at Nerdio and former Microsoft Windows Cloud product leader, featuring cloud endpoint strategy, AVD, Windows 365 and community content.
 - [blog.itprocloud.de](https://blog.itprocloud.de/)  
   Blog by [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/) featuring AVD automation tools, Hydra technical deep dives and host pool management patterns.
 - [ciraltos.com](https://www.ciraltos.com/)
   Blog by Microsoft MVP Travis Roberts with practical AVD networking, regional host pool, Windows 365 and Azure infrastructure walkthroughs.
-- [avdpunks.com](https://avdpunks.com/)  
-  Community blog by a group of AVD specialists covering a wide range of topics from initial deployment to advanced optimization and security.
 - [rozemuller.com](https://rozemuller.com/)  
   Blog by MVP [Sander Rozemuller](https://www.linkedin.com/in/sanderrozemuller/) focused on Azure Virtual Desktop automation using the REST API, PowerShell and infrastructure-as-code.
 - [imab.dk](https://www.imab.dk/)
@@ -561,8 +557,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   After the deprecation of FXTray, it became difficult to check the status of FSLogix profiles. With this PowerShell script, it is once again possible to verify profile status in a simple and centralized way. The [GitHub repository](https://github.com/DrazenNikolic/FSLogix-Profile-Status) contains the Profile Monitor for FSLogix source and releases.
 - [Profile Toolkit for FSLogix (GitHub)](https://github.com/DrazenNikolic/Profile-Toolkit-for-FSLogix/releases)  
   GUI toolkit by Drazen Nikolic for enterprise FSLogix management, built with Electron and React. It covers real-time profile monitoring, profile migration, diagnostics, best practice assessment and advanced VDI operations, extending his earlier FSLogix Profile Status script into a full desktop application.
-- [AVD Sizing Guides (GitHub)](https://github.com/jonathan-vella/azure-local-sizing-guides)  
-  Sizing guides for AVD and related services on Azure Local, maintained by Jonathan Vella (Microsoft Senior CSA).
 
 ### Chats and Channels
 
