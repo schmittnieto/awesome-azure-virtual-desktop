@@ -53,39 +53,46 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 
 ### Important Announcements
 
-> ⚠️ **The Microsoft Entra ID `memberOf` operator preview ends on 3 November 2026.** After that date, dynamic membership groups, dynamic administrative units and entitlement management auto-assignment policies that use `memberOf` stop updating and stay at their last state. Many Azure Virtual Desktop, Windows 365 and Intune assignments rely on these groups, so review and migrate the affected rules before October 2026. More info: [Configure dynamic membership groups with the memberOf operator (preview)](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-member-of?wt.mc_id=MVP_579217).
+> ⚠️ **The Microsoft Entra ID `memberOf` operator preview ends on 3 November 2026.** After that date, dynamic membership groups, dynamic administrative units and entitlement management auto-assignment policies that use `memberOf` stop updating and stay at their last state. Many Azure Virtual Desktop, Windows 365 and Intune assignments rely on these groups, so review and migrate the affected rules before 3 November 2026. More info: [Configure dynamic membership groups with the memberOf operator (preview)](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-member-of?wt.mc_id=MVP_579217).
 
 ### What's new in Azure Virtual Desktop
 
 [What's new in Azure Virtual Desktop?](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new?wt.mc_id=MVP_579217)
 
-Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from August 2025 onward.
+Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from October 2025 onward.
 
 #### Autoscale and Host Pool Management
+- **Azure Virtual Desktop Hybrid** *(Public preview: May 2026; GA: September 2026)* - running session hosts on any on-premises hypervisor (Hyper-V, VMware vSphere, Nutanix AHV) or headless physical Windows Server through Azure Arc, for a service fee of $10 per user per month on top of the usual Windows or RDS user licenses. Windows multi-session, autoscale, power management, Start VM on Connect and session host configuration aren't supported.
+- **Regional host pools** *(GA: September 2026)* - storing host pool metadata in the selected Azure region instead of a shared geographical database, removing cross-region dependencies and limiting the impact of infrastructure issues to the affected region.
+- **Managed identity support for host pools** *(GA: September 2026)* - using managed identities for session host configuration, autoscale, Start VM on Connect and Azure Virtual Desktop on Azure Local instead of assigning permissions to the Azure Virtual Desktop service principal.
+- **Windows 11, version 26H2 images** *(Available: September 2026)* - Windows 11 Enterprise and Windows 11 Enterprise + Microsoft 365 Apps 26H2 images in Azure Marketplace for new session hosts.
 - **Automated host pools** *(GA: June 2026)* - using a single session host configuration to automatically enforce settings across all session hosts in a pool, updated by editing the configuration instead of each host individually.
 - **Dynamic autoscaling** *(GA: June 2026)* - creating and deleting session host virtual machines automatically based on usage patterns for pooled host pools that use session host configuration.
 - **Ephemeral OS disk support** *(Public preview: October 2025; GA: June 2026)* - enabling stateless session hosts to use local VM storage for faster provisioning, reimaging and performance.
-- **Managed identity support for session host configuration** *(validation host pools: August 2025; all host pools: September 2025)* - removing the need to assign permissions to the Azure Virtual Desktop service principal when creating and updating session hosts.
-- **RDP Multipath** *(GA and fully rolled out: July 2025; enhanced session resilience preview: April 2026; redundant TCP GA rollout: May 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
-- **Azure Virtual Desktop for hybrid environments with Arc-enabled servers** *(Public preview: May 2026; GA: September 2026)* - allowing session hosts to run on any hypervisor or bare-metal Windows Server through the Azure Arc extension, without VM provisioning or power management.
+- **RDP Multipath** *(Enhanced session resilience preview: April 2026; redundant TCP GA: July 2026; Azure Government UDP GA and Windows App on macOS beta: September 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
 
 #### App Delivery and Profile Management
-- **App Attach** *(Windows Server 2025 and 2022 support: April 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
+- **App Attach** *(Windows Server 2025 and 2022 support: April 2026; App-V packages with multiple user configuration files: August 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
+- **Pin RemoteApp shortcuts to local desktops** *(Public preview: September 2026)* - letting administrators or users pin RemoteApp shortcuts to local desktops for faster access to frequently used apps.
+- **Remote assistance for RemoteApp sessions with Intune Remote Help** *(July 2026)* - letting helpers see and control the published apps a user is running without access to the rest of the desktop.
 - **FSLogix support for cloud-only and external identities** *(Preview: November 2025; GA: May 2026)* - enabling FSLogix profile containers for both cloud-only and external identities in pooled host pools.
 - **Enhanced RemoteApps** *(Preview: November 2025)* - improving RemoteApp behavior with better Windows Snap support, full-screen mode, DPI handling and visual integration with Windows.
 
 #### Security and Compliance
+- **Display Protection** *(Public preview: September 2026)* - securing the display path between the session host and supported endpoint devices, configurable per host pool in the Azure portal.
+- **In-session passwordless authentication** *(Android preview: July 2026; macOS preview: August 2026; iOS preview: September 2026)* - completing WebAuthn challenges inside the remote session with passkeys on the local device or a connected security key.
+- **Screen capture protection for web connections** *(August 2026)* - extending screen capture protection to sessions opened from supported web browsers.
 - **Context-based redirections** *(Public preview: June 2026)* - dynamically controlling clipboard, printer, drive and low-level USB redirection based on user identity, device compliance and network conditions, extending server-side policy enforcement for BYOD scenarios.
-- **Token protection support in Windows App on Windows devices** *(GA: August 2025)* - allowing Conditional Access policies to require sign-in tokens that can only be used from the intended device.
-- **External identity support** *(Preview without FSLogix: September 2025; GA: November 2025; Windows App for US Government GA and macOS/Android preview: April 2026)* - allowing external identities to access Azure Virtual Desktop resources with expanded client support.
+- **External identity support** *(GA: November 2025; Windows App for US Government GA: April 2026; Android GA: July 2026; macOS GA: September 2026; iOS GA: October 2026)* - allowing external identities to access Azure Virtual Desktop resources with Windows App on every major client platform.
 - **Centralized RDP Shortpath management** *(GA: January 2026)* - enabling administrators to configure RDP Shortpath transport modes through Microsoft Intune or Group Policy.
 - **RDP Shortpath over Private Link** *(GA: February 2026)* - enabling UDP-based RDP Shortpath connections over Azure Private Link with explicit opt-in.
 - **Windows Cloud Keyboard Input Protection** *(Preview: November 2025)* - encrypting keystrokes at the kernel level to help protect sessions from keylogger malware and endpoint threats.
 
 #### Client Experience
-- **Global expansion of TURN Relay** *(GA: September 2025)* - expanding the TURN relay service to 39 Azure regions with a dedicated IP range, improving RDP Shortpath for Public Networks performance and reliability.
+- **TWAIN scanner redirection** *(Public preview: September 2026)* - redirecting supported scanners on local Windows devices into the remote session through high-level redirection, with a better scanning experience than USB redirection.
+- **RAW printing support** *(Public preview: August 2026)* - sending redirected print jobs as RAW instead of XPS for devices such as label printers, reducing the need for printer drivers on session hosts.
+- **Modern Auto-Reconnect** *(Public preview and phased rollout: August 2026)* - preserving session state during temporary network interruptions and automatically restoring connectivity when network conditions improve, powered by RDP Multipath for faster recovery and fewer user-visible disruptions than the traditional reconnect model.
 - **Microsoft Teams media optimization** *(WebRTC-based Teams GA and macOS preview: March 2026)* - reducing latency and improving call quality for meetings running inside AVD sessions through newer optimization architectures.
-- **Modern Auto-Reconnect** *(Public preview: August 2026)* - preserving session state during temporary network interruptions and automatically restoring connectivity when network conditions improve, powered by RDP Multipath for faster recovery and fewer user-visible disruptions than the traditional reconnect model.
 
 ### Azure Virtual Desktop
 
@@ -96,7 +103,9 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [What's new in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new?wt.mc_id=MVP_579217)  
   Monthly updates listing the latest features and improvements in Azure Virtual Desktop.
 - [Azure Virtual Desktop Pricing](https://azure.microsoft.com/en-us/pricing/details/virtual-desktop/?wt.mc_id=MVP_579217)  
-  Overview of the per-user access pricing model and session host virtual machine costs.
+  Overview of the per-user access pricing model and session host virtual machine costs, plus the per user per month fee for Azure Virtual Desktop Hybrid and the per virtual core fee for Azure Virtual Desktop on Azure Local.
+- [Regional host pools (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/regional-host-pools?wt.mc_id=MVP_579217)  
+  How regional host pools store host pool metadata in the selected Azure region to remove cross-region dependencies, generally available since September 2026.
 - [Prerequisites for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/prerequisites?wt.mc_id=MVP_579217)  
   Network, identity and subscription requirements before deploying Azure Virtual Desktop.
 - [Create a host pool (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-host-pool?wt.mc_id=MVP_579217)  
@@ -123,9 +132,15 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 ### Azure Virtual Desktop Hybrid and Azure Local
 
 - [Azure Virtual Desktop Hybrid Overview (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/hybrid-overview?wt.mc_id=MVP_579217)  
-  Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server through Azure Arc. Generally available since September 2026, it does not support Windows 10 or Windows 11 Enterprise multi-session.
+  Overview of Azure Virtual Desktop Hybrid, which keeps the AVD service in Azure while running session hosts on any on-premises hypervisor or bare-metal Windows Server through Azure Arc. Generally available since September 2026, it does not support Windows 10 or Windows 11 Enterprise multi-session, autoscale, power management or Start VM on Connect.
+- [Azure Virtual Desktop Hybrid is now generally available (Tech Community)](https://techcommunity.microsoft.com/blog/azurevirtualdesktopblog/microsoft-azure-virtual-desktop-hybrid-is-now-generally-available/4550523?wt.mc_id=MVP_579217)  
+  General availability announcement from September 2026 for session hosts on Arc-enabled servers running on Hyper-V, VMware vSphere, Nutanix AHV or physical hardware.
+- [Deploy Azure Virtual Desktop Hybrid (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-virtual-desktop-hybrid?wt.mc_id=MVP_579217)  
+  How to install the Azure Virtual Desktop Arc extension on an Arc-enabled machine to install the AVD components and register it with a host pool.
+- [Azure Virtual Desktop Hybrid pricing and licensing (Microsoft, PDF)](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/azure/Azure-Virtual-Desktop-Hybrid-Per-user-per-month-pricing.pdf)  
+  One-page summary of the AVD Hybrid service fee of $10 per user per month, which covers the AVD service for Windows 11 single-session and Windows Server session hosts. Users still need a Windows license (Microsoft 365 E3/E5/F3/F5, Business Premium, Windows Enterprise E3/E5 or Windows VDA) or an RDS license (RDS CAL with Software Assurance, RDS User Subscription or RDS SAL). Purchase goes through the Microsoft account team.
 - [Azure Virtual Desktop on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217)  
-  Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images.
+  Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images. The AVD service fee on Azure Local is billed per session host virtual core per hour instead of per user, which usually comes out cheaper with multi-session.
 - [Microsoft Entra only join for AVD on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217#limitations)  
   AVD session hosts on Azure Local support native Microsoft Entra join, removing the need for an AD DS domain. Deploy these session hosts through PowerShell or other automated methods, since the AVD portal only adds session hosts to an AD DS domain.
 - [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
@@ -576,8 +591,14 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 | ~~[NerdioCon 2026 - Palm Springs (USA)](https://www.nerdiocon.com/)~~ | Nerdio conference focused on Microsoft cloud endpoint management, Azure Virtual Desktop, Windows 365, Intune and AI-driven operations. | ~~Not listed~~ | ~~No~~ | ~~May 4-6, 2026~~ |
 | ~~[EUCforumDE Community Day 2026 - Darmstadt (Germany)](https://www.eucforum.de/25-06-2026-eucforumde-community-day-2026/)~~ | Community-driven end-user computing conference covering digital workplace architectures, security and automation topics. | ~~Free~~ | ~~No~~ | ~~June 25, 2026~~ |
 | ~~[Windows Cloud Workshop series - multiple cities](https://getnerdio.com/events/)~~ | Hands-on Nerdio and Microsoft workshop series for Azure Virtual Desktop, Windows 365, cloud endpoint strategy and guided lab practice. | ~~Not listed~~ | ~~No~~ | ~~May 13 - June 11, 2026~~ |
-| [EUC World 2026 - Milwaukee (USA)](https://worldofeuc.org/EUCWorld2026) | Community-driven EUC conference covering virtual desktops, DaaS, Windows in the Cloud, app delivery and digital workspace operations. | $250-$400, depending on registration date | No | September 29 - October 1, 2026 |
+| ~~[EUC World 2026 - Milwaukee (USA)](https://worldofeuc.org/EUCWorld2026)~~ | Community-driven EUC conference covering virtual desktops, DaaS, Windows in the Cloud, app delivery and digital workspace operations. | ~~$250-$400, depending on registration date~~ | ~~No~~ | ~~September 29 - October 1, 2026~~ |
+| [Security Ninjas Germany 2026 - Munich (Germany)](https://www.secninjas-germany.com/) | Microsoft security community conference at Microsoft Germany HQ with two parallel tracks on identity, endpoint, cloud and detection across the Microsoft security stack. | Not listed | No | October 20, 2026 |
+| [EUCforumDE - Karlsruhe (Germany)](https://www.eucforum.de/22-10-2026-eucforumde-karlsruhe/) | Community evening at Hoepfner Burghof with sessions on Citrix Provisioning Services, an open "Ask Euch Anything" talk and thin and zero clients for VDI and DaaS by 10ZiG. | Free | No | October 22, 2026 |
+| [SwissEUC - Zurich (Switzerland)](https://swisseuc.ch/events/2610) | Community afternoon at Digicomp Academy with sessions on automated Azure Virtual Desktop deployment, AVD landing zones at scale and Windows 365 and AVD in real-world operations. | Free | No | October 27, 2026 |
+| [EUCforumDE - Cologne (Germany)](https://www.eucforum.de/05-11-2026-eucforumde-koeln/) | Community evening with sessions on deploying XenServer at scale with configuration as code and on AI-assisted software creation for non-developers. | Free | No | November 5, 2026 |
 | [Microsoft Ignite 2026 - San Francisco (USA)](https://ignite.microsoft.com/en-US/home) | Microsoft flagship conference for Azure, Windows, Microsoft 365 and security, with expected Windows Cloud, Azure Virtual Desktop and Windows 365 announcements. | Not listed | To be confirmed | November 17-20, 2026 |
+| [E2E EUCDEX.Ai - Nice (France)](https://e2emvc.com/) | Independent EUC conference with 40-50 sessions on server, application, desktop and storage virtualization, preceded by the "Ai in EUC III" master class on April 8. Venue to be announced in November 2026. | 449 EUR super early bird, including the master class | No | April 9-11, 2027 |
+| [SwissEUC - Bern (Switzerland)](https://swisseuc.ch/events) | Community afternoon with a vendor technical session, community talks and a tech talk on EUC technologies. Agenda and registration to be published. | Free | No | May 25, 2027 |
 
 <!-- AWESOMEAZUREVIRTUALDESKTOP:END -->
 ---
