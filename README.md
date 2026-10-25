@@ -595,6 +595,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 | [Microsoft Ignite 2026 - San Francisco (USA)](https://ignite.microsoft.com/en-US/home) | Microsoft flagship conference for Azure, Windows, Microsoft 365 and security, with expected Windows Cloud, Azure Virtual Desktop and Windows 365 announcements. | Not listed | To be confirmed | November 17-20, 2026 |
 | [E2E EUCDEX.Ai - Nice (France)](https://e2emvc.com/) | Independent EUC conference with 40-50 sessions on server, application, desktop and storage virtualization, preceded by the "Ai in EUC III" master class on April 8. Venue to be announced in November 2026. | 449 EUR super early bird, including the master class | No | April 9-11, 2027 |
 | [SwissEUC - Bern (Switzerland)](https://swisseuc.ch/events) | Community afternoon with a vendor technical session, community talks and a tech talk on EUC technologies. Agenda and registration to be published. | Free | No | May 25, 2027 |
+| [EUCtech Denmark 2027 - Billund (Denmark)](https://euctech.dk) | 10th edition of the Danish EUC conference at LEGOLAND Hotel & Conference, with 40-minute sessions at level 200-500 on cloud infrastructure and DaaS, EUC datacenter operations, security and governance, plus modern workplace management. | Not listed | No | May 26-27, 2027 |
 
 <!-- AWESOMEAZUREVIRTUALDESKTOP:END -->
 ---
