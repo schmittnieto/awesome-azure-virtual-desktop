@@ -448,6 +448,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Blog by Aresh Sarkari with hands-on AVD, Terraform, automation and end-user computing content frequently referenced by the AVD Community Newsletter.
 - [johanvanneuville.com](https://johanvanneuville.com/category/avd/)
   Blog by MVP [Johan Vanneuville](https://www.linkedin.com/in/johan-vanneuville-64142b4b/) covering Azure Virtual Desktop, Windows 365, Nerdio and cloud endpoint security.
+- [whyazure.in](https://whyazure.in/category/azure-virtual-desktop/)
+  Blog by Azure Virtual Desktop and Windows 365 MVP [Aavisek Choudhury](https://www.linkedin.com/in/aavisek-choudhury-43b6196/) with more than 150 articles on AVD and Windows 365 features, deployment and troubleshooting, plus Citrix and Azure infrastructure content.
 - [blog.itprocloud.de](https://blog.itprocloud.de/)  
   Blog by [Marcel Meurer](https://www.linkedin.com/in/marcelmeurer/) featuring AVD automation tools, Hydra technical deep dives and host pool management patterns.
 - [ciraltos.com](https://www.ciraltos.com/)
