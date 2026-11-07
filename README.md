@@ -559,6 +559,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   After the deprecation of FXTray, it became difficult to check the status of FSLogix profiles. With this PowerShell script, it is once again possible to verify profile status in a simple and centralized way. The [GitHub repository](https://github.com/DrazenNikolic/FSLogix-Profile-Status) contains the Profile Monitor for FSLogix source and releases.
 - [Profile Toolkit for FSLogix (GitHub)](https://github.com/DrazenNikolic/Profile-Toolkit-for-FSLogix/releases)  
   GUI toolkit by Drazen Nikolic for enterprise FSLogix management, built with Electron and React. It covers real-time profile monitoring, profile migration, diagnostics, best practice assessment and advanced VDI operations, extending his earlier FSLogix Profile Status script into a full desktop application.
+- [RMM for Azure Virtual Desktop Session Hosts Checklist (GitHub)](https://github.com/izikipizi/nizlo-msp-operations-resources/blob/v1.74.0/docs/rmm-for-azure-virtual-desktop-session-hosts-checklist.html)
+  Versioned source for a vendor-neutral 28-check guide to evaluating RMM coverage for pooled and personal session-host lifecycle, identity, guest versus AVD control-plane signals, image and patch authority, user sessions, coexistence, licensing and exit planning. The [rendered checklist](https://izikipizi.github.io/nizlo-msp-operations-resources/rmm-for-azure-virtual-desktop-session-hosts-checklist.html) includes its source boundaries and relationship disclosure.
 
 ### Chats and Channels
 
