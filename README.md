@@ -33,7 +33,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
   - [Testing and Assessment](#testing-and-assessment)
     - [Login VSI](#login-vsi)
     - [Lakeside SysTrack](#lakeside-systrack)
-    - [Rimo3](#rimo3)
+    - [WorkspaceDNA (formerly Rimo3)](#workspacedna-formerly-rimo3)
   - [Thin Clients](#thin-clients)
     - [IGEL](#igel)
     - [10ZiG](#10zig)
@@ -53,23 +53,23 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 
 ### Important Announcements
 
-> ⚠️ **The Microsoft Entra ID `memberOf` operator preview ends on 3 November 2026.** After that date, dynamic membership groups, dynamic administrative units and entitlement management auto-assignment policies that use `memberOf` stop updating and stay at their last state. Many Azure Virtual Desktop, Windows 365 and Intune assignments rely on these groups, so review and migrate the affected rules before 3 November 2026. More info: [Configure dynamic membership groups with the memberOf operator (preview)](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-member-of?wt.mc_id=MVP_579217).
+> ⚠️ **Host pools with a session host configuration will require a managed identity.** In a future service update, Microsoft will block adding session hosts to host pools that use a session host configuration unless the host pool has a system-assigned or user-assigned managed identity. This replaces the reliance on the Azure Virtual Desktop service principal. No date has been announced yet, so assign the managed identity and its permissions now to avoid failed scale-out and deployment pipelines. More info: [Configure managed identity in Azure Virtual Desktop](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-managed-identity?wt.mc_id=MVP_579217).
 
 ### What's new in Azure Virtual Desktop
 
 [What's new in Azure Virtual Desktop?](https://learn.microsoft.com/en-us/azure/virtual-desktop/whats-new?wt.mc_id=MVP_579217)
 
-Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from October 2025 onward.
+Azure Virtual Desktop receives continuous monthly service updates. Below is a summary of key updates from November 2025 onward.
 
 #### Autoscale and Host Pool Management
 - **Azure Virtual Desktop Hybrid** *(Public preview: May 2026; GA: September 2026)* - running session hosts on any on-premises hypervisor (Hyper-V, VMware vSphere, Nutanix AHV) or headless physical Windows Server through Azure Arc, for a service fee of $10 per user per month on top of the usual Windows or RDS user licenses. Windows multi-session, autoscale, power management, Start VM on Connect and session host configuration aren't supported.
 - **Regional host pools** *(GA: September 2026)* - storing host pool metadata in the selected Azure region instead of a shared geographical database, removing cross-region dependencies and limiting the impact of infrastructure issues to the affected region.
-- **Managed identity support for host pools** *(GA: September 2026)* - using managed identities for session host configuration, autoscale, Start VM on Connect and Azure Virtual Desktop on Azure Local instead of assigning permissions to the Azure Virtual Desktop service principal.
+- **Managed identity support for host pools** *(GA: September 2026)* - using managed identities for session host configuration, autoscale, Start VM on Connect and Azure Virtual Desktop on Azure Local instead of assigning permissions to the Azure Virtual Desktop service principal. A future service update makes it mandatory for adding session hosts to host pools with a session host configuration.
 - **Windows 11, version 26H2 images** *(Available: September 2026)* - Windows 11 Enterprise and Windows 11 Enterprise + Microsoft 365 Apps 26H2 images in Azure Marketplace for new session hosts.
 - **Automated host pools** *(GA: June 2026)* - using a single session host configuration to automatically enforce settings across all session hosts in a pool, updated by editing the configuration instead of each host individually.
 - **Dynamic autoscaling** *(GA: June 2026)* - creating and deleting session host virtual machines automatically based on usage patterns for pooled host pools that use session host configuration.
-- **Ephemeral OS disk support** *(Public preview: October 2025; GA: June 2026)* - enabling stateless session hosts to use local VM storage for faster provisioning, reimaging and performance.
-- **RDP Multipath** *(Enhanced session resilience preview: April 2026; redundant TCP GA: July 2026; Azure Government UDP GA and Windows App on macOS beta: September 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
+- **Ephemeral OS disk support** *(GA: June 2026)* - enabling stateless session hosts to use local VM storage for faster provisioning, reimaging and performance.
+- **RDP Multipath** *(Enhanced session resilience preview: April 2026; redundant TCP GA: July 2026; Windows App on macOS beta: September 2026; Azure Government GA: October 2026)* - improving connection reliability by using multiple network paths between the client and session host or Cloud PC.
 
 #### App Delivery and Profile Management
 - **App Attach** *(Windows Server 2025 and 2022 support: April 2026; App-V packages with multiple user configuration files: August 2026)* - supports MSIX, Appx and App-V package formats and simplifies the staging and assignment workflow through the Azure portal.
@@ -82,7 +82,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - **Display Protection** *(Public preview: September 2026)* - securing the display path between the session host and supported endpoint devices, configurable per host pool in the Azure portal.
 - **In-session passwordless authentication** *(Android preview: July 2026; macOS preview: August 2026; iOS preview: September 2026)* - completing WebAuthn challenges inside the remote session with passkeys on the local device or a connected security key.
 - **Screen capture protection for web connections** *(August 2026)* - extending screen capture protection to sessions opened from supported web browsers.
-- **Context-based redirections** *(Public preview: June 2026)* - dynamically controlling clipboard, printer, drive and low-level USB redirection based on user identity, device compliance and network conditions, extending server-side policy enforcement for BYOD scenarios.
+- **Context-based redirections** *(Public preview: June 2026; RemoteApp support preview: October 2026)* - dynamically controlling clipboard, printer, drive and low-level USB redirection based on user identity, device compliance and network conditions through Microsoft Entra authentication context, now for RemoteApp sessions as well as full desktops.
 - **External identity support** *(GA: November 2025; Windows App for US Government GA: April 2026; Android GA: July 2026; macOS GA: September 2026; iOS GA: October 2026)* - allowing external identities to access Azure Virtual Desktop resources with Windows App on every major client platform.
 - **Centralized RDP Shortpath management** *(GA: January 2026)* - enabling administrators to configure RDP Shortpath transport modes through Microsoft Intune or Group Policy.
 - **RDP Shortpath over Private Link** *(GA: February 2026)* - enabling UDP-based RDP Shortpath connections over Azure Private Link with explicit opt-in.
@@ -93,6 +93,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - **RAW printing support** *(Public preview: August 2026)* - sending redirected print jobs as RAW instead of XPS for devices such as label printers, reducing the need for printer drivers on session hosts.
 - **Modern Auto-Reconnect** *(Public preview and phased rollout: August 2026)* - preserving session state during temporary network interruptions and automatically restoring connectivity when network conditions improve, powered by RDP Multipath for faster recovery and fewer user-visible disruptions than the traditional reconnect model.
 - **Microsoft Teams media optimization** *(WebRTC-based Teams GA and macOS preview: March 2026)* - reducing latency and improving call quality for meetings running inside AVD sessions through newer optimization architectures.
+- **RDP Shortpath with TURN relay in Azure Government** *(Public preview: September 2026; GA: October 2026)* - providing relayed UDP connectivity when a direct connection isn't possible, which requires allowing 20.140.236.0/22 over UDP 3478 in the network configuration.
 
 ### Azure Virtual Desktop
 
@@ -118,6 +119,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to publish individual applications instead of full desktops using RemoteApp, reducing bandwidth and simplifying the user experience.
 - [Watermarking in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/watermarking?wt.mc_id=MVP_579217)  
   How to enable QR-code watermarks in RDP sessions to deter and trace unauthorized screen captures.
+- [Configure context-based redirections (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/context-based-redirections?tabs=azure-virtual-desktop&wt.mc_id=MVP_579217)  
+  Combined Azure Virtual Desktop and Windows 365 guide for controlling clipboard, drive, printer and USB redirection with Microsoft Entra authentication context and Conditional Access, including RemoteApp sessions (preview).
 - [Screen capture protection (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/screen-capture-protection?wt.mc_id=MVP_579217)  
   Policy that prevents client-side tools from capturing session content, relevant for regulated industries.
 - [Licensing Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/licensing?wt.mc_id=MVP_579217)
@@ -230,6 +233,16 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Architecture guidance for connecting Windows 365 Cloud PCs to customer-managed Azure networks and on-premises resources.
 - [What's new in Windows 365 Enterprise and Frontline (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new?wt.mc_id=MVP_579217)
   Release notes for Windows 365 Enterprise and Frontline features, updates and service improvements.
+- [What is Windows 365 Flex? (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/introduction-windows-365-flex?wt.mc_id=MVP_579217)
+  Overview of Windows 365 Flex in dedicated mode (up to three Cloud PCs per license with one concurrent session) and shared mode, including intelligent prestart and Session State Retention, which hibernates idle dedicated Cloud PCs instead of powering them off (GA: October 2026).
+- [Managing Windows 365 Reserve (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/windows-365-reserve-manage?wt.mc_id=MVP_579217)
+  Setup and operations guide for Reserve Cloud PCs with 10 days of access per user and year, including optional auto-deprovisioning of unused Reserve Cloud PCs that keeps the remaining access days (preview: October 2026).
+- [Remote connection experience (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/remote-connection-experience?wt.mc_id=MVP_579217)
+  How to set the default display experience for Cloud PCs (GA: October 2026) and target remote connection settings at device groups or all devices, while Cloud PC configurations and Windows App settings can target all users (preview: October 2026).
+- [Deprovision or end grace period for Cloud PCs in Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/end-grace-period?wt.mc_id=MVP_579217)
+  How to deprovision Cloud PCs in the grace period, now in bulk from the provisioning policy view or the Intune Bulk Action Wizard for Enterprise and Flex dedicated Cloud PCs (GA: October 2026).
+- [Requirements for Azure storage accounts used with Windows 365 (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/requirements-azure-storage-accounts?wt.mc_id=MVP_579217)
+  Requirements for the customer storage accounts that receive Cloud PC snapshots for forensics, compliance and disaster recovery.
 
 ### Windows 365 Link
 
@@ -399,12 +412,12 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Lakeside SysTrack - Digital Experience Monitoring](https://www.lakesidesoftware.com/blog/what-is-digital-experience-monitoring/)  
   How Lakeside collects continuous endpoint telemetry to measure user experience quality inside AVD sessions and identify degradation before it affects users.
 
-#### Rimo3
+#### WorkspaceDNA (formerly Rimo3)
 
-- [Rimo3 - Application Compatibility Testing for AVD](https://www.rimo3.com/citrix-to-avd-migration)  
-  Rimo3 landing page for automated application compatibility and regression testing in AVD and Windows 365 migration projects.
-- [Rimo3 - Platform Overview](https://www.rimo3.com/platform/)  
-  How Rimo3 automates application testing at scale, reducing manual effort and risk for large application portfolios migrating to AVD.
+- [WorkspaceDNA - Citrix to AVD Migration](https://www.workspacedna.com/citrix-to-avd-migration)  
+  WorkspaceDNA landing page for automated application compatibility and regression testing in AVD and Windows 365 migration projects. Rimo3 rebranded as WorkspaceDNA in July 2026 and kept its product names (Change360, Patch360 and others).
+- [WorkspaceDNA - Platform Overview](https://www.workspacedna.com/platform)  
+  How WorkspaceDNA automates application testing at scale, reducing manual effort and risk for large application portfolios migrating to AVD.
 
 ### Thin Clients
 
