@@ -33,7 +33,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
   - [Testing and Assessment](#testing-and-assessment)
     - [Login VSI](#login-vsi)
     - [Lakeside SysTrack](#lakeside-systrack)
-    - [Rimo3](#rimo3)
+    - [WorkspaceDNA (formerly Rimo3)](#workspacedna-formerly-rimo3)
   - [Thin Clients](#thin-clients)
     - [IGEL](#igel)
     - [10ZiG](#10zig)
@@ -412,12 +412,12 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Lakeside SysTrack - Digital Experience Monitoring](https://www.lakesidesoftware.com/blog/what-is-digital-experience-monitoring/)  
   How Lakeside collects continuous endpoint telemetry to measure user experience quality inside AVD sessions and identify degradation before it affects users.
 
-#### Rimo3
+#### WorkspaceDNA (formerly Rimo3)
 
-- [Rimo3 - Application Compatibility Testing for AVD](https://www.rimo3.com/citrix-to-avd-migration)  
-  Rimo3 landing page for automated application compatibility and regression testing in AVD and Windows 365 migration projects.
-- [Rimo3 - Platform Overview](https://www.rimo3.com/platform/)  
-  How Rimo3 automates application testing at scale, reducing manual effort and risk for large application portfolios migrating to AVD.
+- [WorkspaceDNA - Citrix to AVD Migration](https://www.workspacedna.com/citrix-to-avd-migration)  
+  WorkspaceDNA landing page for automated application compatibility and regression testing in AVD and Windows 365 migration projects. Rimo3 rebranded as WorkspaceDNA in July 2026 and kept its product names (Change360, Patch360 and others).
+- [WorkspaceDNA - Platform Overview](https://www.workspacedna.com/platform)  
+  How WorkspaceDNA automates application testing at scale, reducing manual effort and risk for large application portfolios migrating to AVD.
 
 ### Thin Clients
 

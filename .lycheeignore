@@ -3,3 +3,7 @@
 # LinkedIn returns HTTP 999 to automated clients, so profile and newsletter
 # links cannot be validated in CI. They are checked manually when added.
 linkedin.com
+
+# NerdioCon sits behind Cloudflare bot protection and returns HTTP 403 to
+# automated clients. The event is in the past and kept for reference.
+nerdiocon\.com
