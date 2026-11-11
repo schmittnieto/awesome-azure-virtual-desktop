@@ -10,7 +10,7 @@ A curated list of links and resources for **Azure Virtual Desktop** and its rela
 
 - [Official](#official)
   - [Important Announcements](#important-announcements)
-  - [What's new in Azure Virtual Desktop?](#whats-new-in-azure-virtual-desktop)
+  - [What's new in Azure Virtual Desktop](#whats-new-in-azure-virtual-desktop)
   - [Azure Virtual Desktop](#azure-virtual-desktop)
   - [Azure Virtual Desktop Hybrid and Azure Local](#azure-virtual-desktop-hybrid-and-azure-local)
   - [FSLogix](#fslogix)
@@ -109,9 +109,9 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How regional host pools store host pool metadata in the selected Azure region to remove cross-region dependencies, generally available since September 2026.
 - [Prerequisites for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/prerequisites?wt.mc_id=MVP_579217)  
   Network, identity and subscription requirements before deploying Azure Virtual Desktop.
-- [Create a host pool (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/create-host-pool?wt.mc_id=MVP_579217)  
-  Step-by-step guide to creating pooled or personal host pools in Azure Virtual Desktop.
-- [Autoscale for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-scaling-plan?wt.mc_id=MVP_579217)  
+- [Deploy Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/deploy-azure-virtual-desktop?wt.mc_id=MVP_579217)  
+  Step-by-step guide to creating pooled or personal host pools, workspaces, application groups and session hosts in Azure Virtual Desktop.
+- [Create and assign an autoscale scaling plan (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/autoscale-create-assign-scaling-plan?wt.mc_id=MVP_579217)  
   How to configure scaling plans to automatically start and stop session hosts based on demand, reducing compute costs.
 - [Personal desktop assignment (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type?wt.mc_id=MVP_579217)
   How to configure automatic or direct assignment for personal desktops, including multiple personal desktops per user.
@@ -125,10 +125,10 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Policy that prevents client-side tools from capturing session content, relevant for regulated industries.
 - [Licensing Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/licensing?wt.mc_id=MVP_579217)
   Eligible Windows, Microsoft 365 and Remote Desktop Services licenses for Azure Virtual Desktop deployments.
-- [Azure Virtual Desktop Security Guide (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-guide?wt.mc_id=MVP_579217)  
+- [Security recommendations for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/security-recommendations?wt.mc_id=MVP_579217)  
   Security guidance for AVD deployments covering identity, networking, session security and data protection.
-- [Secure Boot Certificate Updates for Azure Virtual Desktop (Microsoft Support, KB5080931)](https://support.microsoft.com/en-us/topic/secure-boot-certificate-updates-for-azure-virtual-desktop-06a8a1bc-2510-4ead-9bea-3698e1d6b1db)  
-  Guidance for updating Secure Boot enabled session hosts and Azure Compute Gallery golden images to the 2023 certificates before the 2011 certificates expire in June 2026, covering inventory and monitoring options, automatic and IT-initiated deployment methods and known issues.
+- [Secure Boot Certificate Updates for Azure Virtual Desktop (Microsoft Support, KB5080931)](https://support.microsoft.com/en-us/servicing/os/secure-boot/2026/02/secure-boot-certificate-updates-for-azure-virtual-desktop)  
+  Guidance for moving Secure Boot enabled session hosts and Azure Compute Gallery golden images to the 2023 certificates, since the 2011 certificates started expiring in June 2026. Covers inventory and monitoring options, automatic and IT-initiated deployment methods and known issues.
 - [Optimize Azure Virtual Desktop using insights from a Well-Architected Review Assessment (Tech Community)](https://techcommunity.microsoft.com/blog/AzureArchitectureBlog/optimize-azure-virtual-desktop-using-insights-from-a-well-architected-review-assessment/4375459?wt.mc_id=MVP_579217)  
   Guidance on evaluating AVD environments with the Well-Architected Framework assessment to identify risks, measure maturity and improve architecture quality.
 
@@ -146,8 +146,6 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Running Azure Virtual Desktop session hosts on Azure Local for data residency, latency and on-premises scenarios. In contrast to generic AVD Hybrid, Azure Local also supports Windows 11 and Windows 10 Enterprise multi-session alongside single-session desktops and Windows Server images. The AVD service fee on Azure Local is billed per session host virtual core per hour instead of per user, which usually comes out cheaper with multi-session.
 - [Microsoft Entra only join for AVD on Azure Local (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-local-overview?wt.mc_id=MVP_579217#limitations)  
   AVD session hosts on Azure Local support native Microsoft Entra join, removing the need for an AD DS domain. Deploy these session hosts through PowerShell or other automated methods, since the AVD portal only adds session hosts to an AD DS domain.
-- [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
-  Companion curated list for Azure Local with a dedicated Azure Virtual Desktop section covering deployment, management tooling and community resources for running AVD on Azure Local.
 
 ### FSLogix
 
@@ -161,10 +159,10 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to use Azure NetApp Files for high-performance FSLogix profile storage in large deployments or latency-sensitive workloads.
 - [FSLogix Cloud Cache (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/concepts-fslogix-cloud-cache?wt.mc_id=MVP_579217)
   How to use FSLogix Cloud Cache to replicate profile containers across multiple storage locations for resilience and business continuity.
-- [What's new in FSLogix (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/whats-new?wt.mc_id=MVP_579217)  
+- [FSLogix release notes (Microsoft Docs)](https://learn.microsoft.com/en-us/fslogix/overview-release-notes?wt.mc_id=MVP_579217)  
   Release notes and update history for FSLogix versions.
 - [Action required: Windows Kerberos hardening (RC4) may affect FSLogix profiles on SMB storage (Microsoft Tech Community)](https://techcommunity.microsoft.com/blog/fslogix-blog/action-required-windows-kerberos-hardening-rc4-may-affect-fslogix-profiles-on-sm/4506378?wt.mc_id=MVP_579217)  
-  Guidance on the April 2026 Windows Kerberos hardening change that defaults unset AD object encryption to AES-SHA1 instead of RC4, which can break FSLogix profile authentication on SMB storage integrated with Active Directory unless service accounts and AD objects are updated to support AES-SHA1 before enforcement completes in July 2026.
+  Background on the Windows Kerberos hardening change that started in April 2026 and defaults unset AD object encryption to AES-SHA1 instead of RC4. Enforcement completed in July 2026, so FSLogix profiles on SMB storage integrated with Active Directory can fail to authenticate until service accounts and AD objects support AES-SHA1.
 
 ### Azure Files
 
@@ -173,9 +171,9 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 - [Overview of Azure Files identity-based authentication for SMB access (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-active-directory-overview?wt.mc_id=MVP_579217)
   Overview of identity-based access for Azure Files over SMB, including share-level, directory-level and file-level permission models.
 - [Enable Microsoft Entra Kerberos authentication for hybrid and cloud-only identities on Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal%2Cintune&wt.mc_id=MVP_579217)
-  How to enable Kerberos authentication for Azure Files with hybrid identities and cloud-only identities in preview, useful for FSLogix profile containers on Entra-joined AVD session hosts.
+  How to enable Kerberos authentication for Azure Files with hybrid identities and cloud-only identities, useful for FSLogix profile containers on Entra-joined AVD session hosts.
 - [Assign share-level permissions for Azure file shares (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-assign-share-level-permissions?wt.mc_id=MVP_579217)
-  How to grant SMB access with Azure RBAC roles or default share-level permissions, including the default permission model required for cloud-only identities in preview.
+  How to grant SMB access with Azure RBAC roles or default share-level permissions, including the default permission model required for cloud-only identities.
 - [Configure directory and file-level permissions for Azure Files (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-configure-file-level-permissions?wt.mc_id=MVP_579217)
   How to configure Windows ACLs for Azure file shares, including differences between hybrid identities and cloud-only identities when using Microsoft Entra Kerberos.
 - [Entra-only identities for Azure Files SMB now generally available (Azure Blog)](https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/?wt.mc_id=MVP_579217)
@@ -229,7 +227,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to define the rules Windows 365 uses to provision Cloud PCs for assigned Microsoft Entra groups.
 - [Access a Cloud PC (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/end-user-access-cloud-pc?wt.mc_id=MVP_579217)
   Supported client and browser options for users connecting to Windows 365 Cloud PCs.
-- [Windows 365 Azure network connection (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/guide/virtual-desktop/windows-365-azure-network-connection?wt.mc_id=MVP_579217)
+- [Windows 365 Azure network connection (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/virtual-desktop/windows-365-azure-network-connection?wt.mc_id=MVP_579217)
   Architecture guidance for connecting Windows 365 Cloud PCs to customer-managed Azure networks and on-premises resources.
 - [What's new in Windows 365 Enterprise and Frontline (Microsoft Docs)](https://learn.microsoft.com/en-us/windows-365/enterprise/whats-new?wt.mc_id=MVP_579217)
   Release notes for Windows 365 Enterprise and Frontline features, updates and service improvements.
@@ -263,7 +261,7 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### Microsoft Intune
 
-- [Microsoft Intune Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/mem/intune/?wt.mc_id=MVP_579217)
+- [Microsoft Intune Documentation (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/?wt.mc_id=MVP_579217)
   Documentation hub for Microsoft Intune endpoint management, app management, endpoint security and device compliance.
 - [Manage the operating system of Azure Virtual Desktop session hosts (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/management?wt.mc_id=MVP_579217)
   Overview of using Microsoft Intune or Configuration Manager to manage Azure Virtual Desktop session hosts.
@@ -271,23 +269,23 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   How to manage personal desktop session hosts with Intune policy, apps, compliance policy and Conditional Access.
 - [Using Azure Virtual Desktop multi-session with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/solutions/azure-virtual-desktop-multi-session?wt.mc_id=MVP_579217)
   How to manage Windows Enterprise multi-session session hosts using device-scope and user-scope Intune policies.
-- [Use the Intune settings catalog (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/configuration/settings-catalog?wt.mc_id=MVP_579217)
+- [Use the Intune settings catalog (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-configuration/settings-catalog/?wt.mc_id=MVP_579217)
   How to create granular configuration profiles with device and user scope settings, including Windows Enterprise multi-session filters.
 - [Intune security baselines (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-security/security-baselines/overview?wt.mc_id=MVP_579217)
   Overview of Intune security baseline profiles for Windows devices and endpoint security configuration.
-- [Windows App deployment by using Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/intune-service/apps/apps-windows-10-app-deploy?wt.mc_id=MVP_579217)
-  How to deploy Windows applications with Intune, including app assignment and Windows app deployment behavior.
+- [Windows App Deployment by Using Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/app-management/deployment/deploy-windows?wt.mc_id=MVP_579217)
+  How to deploy Windows applications to managed devices with Intune, including app assignment and deployment behavior. It covers Windows apps in general, not only the Windows App client.
 - [Configure clipboard redirection with Microsoft Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/redirection-configure-clipboard?tabs=intune&wt.mc_id=MVP_579217)
   How to configure clipboard redirection for Azure Virtual Desktop session hosts using Intune settings catalog or Group Policy.
-- [Manage Windows Update ring policies with Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-updates/windows/update-rings?wt.mc_id=MVP_579217)
+- [Manage Windows Update ring policies with Intune (Microsoft Docs)](https://learn.microsoft.com/en-us/intune/device-updates/windows/manage-update-rings?wt.mc_id=MVP_579217)
   How Windows Update ring policies define update behavior for Windows devices; for AVD multi-session, use supported Windows Update settings in the Settings catalog.
 
 ### Monitoring and Insights
 
 - [Azure Virtual Desktop Insights (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights?wt.mc_id=MVP_579217)  
   How to use AVD Insights, an Azure Monitor workbook, to monitor session host health, user connections and resource consumption from a single view.
-- [Use Azure Monitor for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/azure-monitor?wt.mc_id=MVP_579217)  
-  Guide to collecting and analyzing AVD diagnostics data in Azure Monitor and Log Analytics for alerting and custom queries.
+- [Azure Virtual Desktop Insights glossary (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights-glossary?wt.mc_id=MVP_579217)  
+  Definitions of the terms and metrics used in Azure Virtual Desktop Insights, useful when reading its reports or building custom Log Analytics queries.
 - [Diagnostic settings in Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/diagnostics-log-analytics?wt.mc_id=MVP_579217)  
   How to enable and route AVD diagnostic logs to Log Analytics for custom querying and long-term retention.
 - [Azure Virtual Desktop Insights use cases (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/insights-use-cases?wt.mc_id=MVP_579217)
@@ -324,15 +322,11 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### Architecture and Best Practices
 
-- [Azure Virtual Desktop Landing Zone Accelerator (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone?wt.mc_id=MVP_579217)  
-  Enterprise-scale reference implementation for Azure Virtual Desktop following the Cloud Adoption Framework landing zone model, with Bicep and Terraform modules.
-- [Cloud Adoption Framework for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/?wt.mc_id=MVP_579217)  
-  Strategic and technical guidance for adopting AVD across strategy, planning, readiness, migration and governance phases.
-- [Azure Well-Architected Framework for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/well-architected/azure-virtual-desktop/?wt.mc_id=MVP_579217)  
-  Guidance aligned with the five pillars of the Well-Architected Framework applied specifically to AVD deployments.
-- [Azure Virtual Desktop reference architecture (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop?wt.mc_id=MVP_579217)  
-  Reference architecture for a standard multi-session AVD deployment including networking, identity and storage components.
-- [Multi-region BCDR for Azure Virtual Desktop (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/wvd/azure-virtual-desktop-multi-region-bcdr?wt.mc_id=MVP_579217)  
+- [Get started with virtual desktop architecture design (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/virtual-desktop/virtual-desktop-get-started?wt.mc_id=MVP_579217)  
+  Entry point for Azure Virtual Desktop architecture guidance. The former Cloud Adoption Framework and Well-Architected Framework articles for AVD now redirect to the general product overview, so this page is the place to start.
+- [Azure Virtual Desktop landing zone design guide (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/landing-zones/azure-virtual-desktop/design-guide?wt.mc_id=MVP_579217)  
+  Design areas and baseline reference architecture for running AVD in an application landing zone, covering networking, identity, storage and management. The AVD Accelerator implements it in Bicep and Terraform.
+- [Multi-region BCDR for Azure Virtual Desktop (Azure Architecture Center)](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop-multi-region-bcdr?wt.mc_id=MVP_579217)  
   Architecture for deploying AVD across multiple Azure regions to meet business continuity and disaster recovery requirements.
 - [Image lifecycle management for Azure Virtual Desktop (Microsoft Docs)](https://learn.microsoft.com/en-us/azure/virtual-desktop/set-up-golden-image?wt.mc_id=MVP_579217)  
   Guidance on building and maintaining golden images (session host templates) using Azure Compute Gallery and Azure Image Builder.
@@ -364,8 +358,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Enterprise AVD management platform for automating host pool sizing, image management, cost optimization and session lifecycle from a single console.
 - [Nerdio Resource Hub](https://getnerdio.com/resources/)
   Official Nerdio resources covering deployment, automation and day-to-day operations.
-- [Nerdio Cost Estimator](https://getnerdio.com/cost-estimator/)  
-  Tool to estimate compute cost savings achieved by adopting Nerdio Manager's autoscale and scheduling features versus managing AVD manually.
+- [Nerdio Cost Estimator](https://getnerdio.com/pricing/msp/nerdio-cost-estimator/)  
+  Wizard in Nerdio Manager for MSP for calculating infrastructure, Microsoft service and Nerdio implementation costs when quoting AVD environments for customers.
 - [Nerdio - AVD for Azure Local](https://getnerdio.com/azure-local/)
   Nerdio overview of Azure Local capabilities and how Nerdio Manager supports Azure Virtual Desktop on hybrid infrastructure.
 - [Nerdio - Azure Virtual Desktop for Hybrid Environments](https://getnerdio.com/avd-hybrid/)
@@ -373,25 +367,29 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### ControlUp
 
-- [ControlUp - Azure Virtual Desktop](https://www.controlup.com/solutions/azure-virtual-desktop/)  
-  ControlUp landing page for AVD, covering real-time session analytics, automated remediation and user experience monitoring.
+- [ControlUp - Windows 365 and Azure Virtual Desktop](https://www.controlup.com/solutions/microsoft/)  
+  ControlUp landing page for Windows 365 and AVD, covering real-time session analytics, automated remediation and user experience monitoring.
 - [ControlUp - Platform Overview](https://www.controlup.com/platform/)  
   Overview of ControlUp's agent-based telemetry, script-based automation and multi-tenant management capabilities for AVD and hybrid EUC environments.
 
 #### Hydra by Login VSI
 
-- [Hydra - Landing Page](https://euc.loginvsi.com/hydra-by-login-vsi)  
-  Hydra product overview from Login VSI, covering image lifecycle management and AVD host pool automation.
+- [Hydra - Landing Page](https://www.loginvsi.com/products/hydra/)  
+  Hydra product overview from Login VSI, covering image lifecycle management and AVD host pool automation. Hydra was created by Marcel Meurer at ITProCloud, which has been part of Login VSI since June 2025.
+- [Hydra - Product Documentation](https://docs.loginvsi.com/hydra)  
+  Official Hydra documentation from Login VSI covering installation, configuration and day-to-day operations.
+- [Hydra - Deployment Repository (GitHub)](https://github.com/MarcelMeurer/WVD-Hydra)  
+  Public repository with the Hydra deployment templates, release binaries and setup guides. Hydra is a proprietary product. A free community edition covers up to 5 session hosts per host pool, 5 host pools, 100 users and a single tenant. The licensed edition costs $5 per concurrent user per month.
 - [Hydra - Imaging, Rollout and Management for Azure Virtual Desktop](https://blog.itprocloud.de/AVD-Hydra-For-Azure-Stack-HCI-Deplyoment-Management/)  
   Article by Marcel Meurer on configuring Hydra for automated image management and rollout in AVD and Azure Local environments.
 
 #### Citrix
 
-- [Citrix DaaS for Azure](https://docs.citrix.com/en-us/citrix-daas-azure.html)  
+- [Citrix DaaS for Azure](https://docs.citrix.com/us/en/citrix-daas-azure.html)  
   Citrix Desktop as a Service offering on Azure, providing Citrix application delivery and management capabilities on top of Azure compute infrastructure.
-- [Citrix DaaS Documentation](https://docs.citrix.com/en-us/citrix-daas)  
+- [Citrix DaaS Documentation](https://docs.citrix.com/us/en/home/citrix-daas.html)  
   Complete Citrix DaaS documentation covering site configuration, machine catalog creation and Citrix policy management.
-- [Citrix Virtual Apps and Desktops - Connecting Azure Local (Docs)](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/2507-ltsr/install-configure/connections/connection-azure-local)  
+- [Citrix Virtual Apps and Desktops - Connecting Azure Local (Docs)](https://docs.citrix.com/us/en/citrix-virtual-apps-desktops/2507-ltsr/install-configure/connections/connection-azure-local.html)  
   Guide on using Citrix Virtual Apps and Desktops with Azure Local infrastructure as the hosting layer.
 
 ### Testing and Assessment
@@ -400,10 +398,10 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 #### Login VSI
 
-- [Login VSI - Load Testing for Virtual Desktops](https://www.loginvsi.com/solutions/azure-virtual-desktop/)  
-  Login VSI landing page for AVD, covering how to benchmark session host capacity and validate user density before production rollout.
-- [Login VSI - Knowledge Base](https://www.loginvsi.com/knowledge-base/)  
-  Documentation hub for Login VSI products including Load Generator and VDI Benchmark.
+- [Login VSI - Login Enterprise for Azure Virtual Desktop](https://www.loginvsi.com/solutions/avd-login-enterprise/)  
+  Login VSI landing page for AVD, covering how to benchmark session host capacity and validate user density before production rollout with Login Enterprise.
+- [Login VSI - Documentation](https://docs.loginvsi.com/)  
+  Documentation hub for Login VSI products, including Login Enterprise and Hydra.
 
 #### Lakeside SysTrack
 
@@ -427,23 +425,23 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 - [IGEL - Azure Virtual Desktop](https://www.igel.com/microsoft/)  
   IGEL landing page for AVD, covering how IGEL OS provides a secure and managed thin client endpoint for accessing AVD sessions with minimal local attack surface.
-- [IGEL Community](https://www.igel.de/learn-and-connect/community/)  
+- [IGEL Community](https://www.igel.de/community/)  
   Community hub for IGEL users and administrators with AVD-specific discussions, how-to guides and troubleshooting resources.
 - [IGEL Ready Program](https://www.igel.de/ready/)  
   Partner ecosystem listing hardware and peripherals certified to work with IGEL OS in AVD environments.
 
 #### 10ZiG
 
-- [10ZiG - Azure Virtual Desktop](https://www.10zig.com/solutions/azure-virtual-desktop)  
-  10ZiG landing page for AVD, covering thin client hardware and 10ZiG NOS purpose-built for accessing Azure Virtual Desktop environments.
-- [10ZiG Manager - Central Management](https://www.10zig.com/en/product/solutions/10zig-manager/)  
+- [10ZiG - Azure Virtual Desktop](https://www.10zig.com/resource/azure-virtual-desktop/)  
+  10ZiG resource page for AVD, covering thin client hardware and 10ZiG NOS purpose-built for accessing Azure Virtual Desktop environments.
+- [10ZiG Manager - Central Management](https://www.10zig.com/product/solutions/10zig-manager/)  
   Overview of 10ZiG's endpoint management platform for deploying and maintaining 10ZiG thin clients at scale in AVD deployments.
 
 ---
 
 ## Community
 
-*Resources that do not come from Microsoft or the vendors listed in the Third Party section.*
+*Resources from the Azure Virtual Desktop community, plus the channels, trainings and events where Microsoft and the community meet. Vendor products are listed in the Third Party section.*
 
 ### Blog
 
@@ -489,8 +487,8 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
   Multi-author blog covering endpoint management including AVD image management, Intune integration and application packaging for virtual environments.
 - [michaelsendpoint.com](https://michaelsendpoint.com/)  
   Blog by [Michael Frank](https://www.linkedin.com/in/michaelsendpoint/) with step-by-step Microsoft guides covering Intune, Microsoft Entra ID, Windows 365, security and PowerShell automation relevant to endpoint and AVD management.
-- [Observability for Azure Virtual Desktop](https://blog.rjz.de/observability_for_avd/)  
-  Blog post by [Ruben Zimmermann](https://www.linkedin.com/in/ruben-zimmermann-9908081a/) covering Azure Virtual Desktop observability with SquaredUp Cloud, Log Analytics and focused KQL queries for VM state, agent health, performance metrics, user connections, configuration changes and session usage.
+- [blog.rjz.de](https://blog.rjz.de/)  
+  Blog by [Ruben Zimmermann](https://www.linkedin.com/in/ruben-zimmermann-9908081a/) on Azure monitoring and automation. His post [Observability for Azure Virtual Desktop](https://blog.rjz.de/observability_for_avd/) covers AVD observability with SquaredUp Cloud, Log Analytics and focused KQL queries for VM state, agent health, performance metrics, user connections, configuration changes and session usage.
 
 ### LinkedIn
 
@@ -552,24 +550,22 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 
 ### GitHub Repos and Tools
 
-- [AVD Accelerator (GitHub)](https://github.com/Azure/avdaccelerator)  
-  Official Microsoft repository with Bicep and Terraform code for deploying AVD following the enterprise-scale landing zone pattern.
-- [RDS-Templates (GitHub)](https://github.com/Azure/RDS-Templates)  
-  Official Microsoft repository with ARM templates and PowerShell scripts for host pool creation, session host registration and application group management.
+*Official Microsoft repositories such as the AVD Accelerator and RDS-Templates are listed under [GitHub Repositories](#github-repositories) in the Official section.*
+
+- [Awesome Azure Local - Azure Virtual Desktop (GitHub)](https://github.com/schmittnieto/awesome-azure-local#avd)  
+  Companion curated list for Azure Local with a dedicated Azure Virtual Desktop section covering deployment, management tooling and community resources for running AVD on Azure Local.
 - [GetToThe-Cloud - Website (GitHub)](https://github.com/GetToThe-Cloud/Website)  
   Source repository for the GetToThe.Cloud website, including AVD-related Terraform and deployment scripts used across the site.
 - [Sander Rozemuller - GitHub](https://github.com/srozemuller)  
   GitHub profile of Sander Rozemuller (MVP) with scripts and modules for managing Azure Virtual Desktop through the REST API and PowerShell, covering host pools, session hosts and application groups.
-- [Marcel Meurer - WVD-Hydra (GitHub)](https://github.com/MarcelMeurer/WVD-Hydra)  
-  Open-source AVD management tool by Marcel Meurer covering host pool automation, image management and session control, predecessor to the commercial Hydra product.
 - [Intune Drive Mapping Generator](https://intunedrivemapping.azurewebsites.net/DriveMapping)  
   Web generator by Nicola Suter for building Intune PowerShell scripts that map network drives on Intune-managed Windows devices. The [GitHub repository](https://github.com/nicolonsky/IntuneDriveMapping) includes source code, documentation and examples for migrating existing Group Policy drive mappings or creating mappings from scratch.
 - [Envoy (GitHub)](https://github.com/j0eyv/Envoy)
   Open-source lightweight user environment manager by Joey Verlinden for Intune-managed Windows devices, useful in AVD and Windows 365 environments that need logon-time drive mappings, printer mappings, registry settings, file actions and shortcuts targeted by Microsoft Entra ID group membership.
 - [Intunewin Downloader (GitHub)](https://github.com/call4cloud-code/Intunewin-Downloader-Public)  
   Windows troubleshooting tool by Rudy Ooms (Call4Cloud) that downloads and decrypts Win32 app packages and remediation scripts a device is already assigned in Microsoft Intune, without needing Graph API permissions or an app registration. Useful for inspecting and validating app delivery on AVD and Windows 365 session hosts from within the existing Intune enrollment context.
-- [AVD - FSLogix Profile Status (Tool)](https://www.linkedin.com/posts/drazen-nikolic-816906142_avd-microsoft-azurevirtualdesktop-ugcPost-7364022385827557376-NEle)  
-  After the deprecation of FXTray, it became difficult to check the status of FSLogix profiles. With this PowerShell script, it is once again possible to verify profile status in a simple and centralized way. The [GitHub repository](https://github.com/DrazenNikolic/FSLogix-Profile-Status) contains the Profile Monitor for FSLogix source and releases.
+- [FSLogix Profile Status (GitHub)](https://github.com/DrazenNikolic/FSLogix-Profile-Status)  
+  PowerShell tool by Drazen Nikolic for checking FSLogix profile status on session hosts in a simple and centralized way, filling the gap left by the deprecated FSLogix tray tool. The repository contains the Profile Monitor for FSLogix source and releases. His [LinkedIn post](https://www.linkedin.com/posts/drazen-nikolic-816906142_avd-microsoft-azurevirtualdesktop-ugcPost-7364022385827557376-NEle) introduces it.
 - [Profile Toolkit for FSLogix (GitHub)](https://github.com/DrazenNikolic/Profile-Toolkit-for-FSLogix/releases)  
   GUI toolkit by Drazen Nikolic for enterprise FSLogix management, built with Electron and React. It covers real-time profile monitoring, profile migration, diagnostics, best practice assessment and advanced VDI operations, extending his earlier FSLogix Profile Status script into a full desktop application.
 
@@ -597,18 +593,23 @@ Azure Virtual Desktop receives continuous monthly service updates. Below is a su
 |------|-------------|-------|--------|------|
 | ~~[AVD Tech Fest 2025 - Berlin (Germany)](https://www.controlup.com/avd-techfest-2025/)~~ | Community-driven EUC event focused on Azure Virtual Desktop, Windows 365, Citrix, Omnissa and digital workspace solutions. | ~~99 EUR~~ | ~~No~~ | ~~September 10-11, 2025~~ |
 | ~~[EUC World Virtual 2026](https://worldofeuc.org/EUCWorld2026_Virtual)~~ | Vendor-neutral virtual EUC conference with sessions on digital workspaces, Intune, Nerdio Manager and desktop modernization. | ~~Not listed~~ | ~~Yes~~ | ~~April 29, 2026~~ |
-| ~~[NerdioCon 2026 - Palm Springs (USA)](https://www.nerdiocon.com/)~~ | Nerdio conference focused on Microsoft cloud endpoint management, Azure Virtual Desktop, Windows 365, Intune and AI-driven operations. | ~~Not listed~~ | ~~No~~ | ~~May 4-6, 2026~~ |
+| ~~[NerdioCon 2026 - Palm Springs (USA)](https://nerdiocon.com/)~~ | Nerdio conference focused on Microsoft cloud endpoint management, Azure Virtual Desktop, Windows 365, Intune and AI-driven operations. | ~~Not listed~~ | ~~No~~ | ~~May 4-6, 2026~~ |
 | ~~[EUCforumDE Community Day 2026 - Darmstadt (Germany)](https://www.eucforum.de/25-06-2026-eucforumde-community-day-2026/)~~ | Community-driven end-user computing conference covering digital workplace architectures, security and automation topics. | ~~Free~~ | ~~No~~ | ~~June 25, 2026~~ |
 | ~~[Windows Cloud Workshop series - multiple cities](https://getnerdio.com/events/)~~ | Hands-on Nerdio and Microsoft workshop series for Azure Virtual Desktop, Windows 365, cloud endpoint strategy and guided lab practice. | ~~Not listed~~ | ~~No~~ | ~~May 13 - June 11, 2026~~ |
 | ~~[EUC World 2026 - Milwaukee (USA)](https://worldofeuc.org/EUCWorld2026)~~ | Community-driven EUC conference covering virtual desktops, DaaS, Windows in the Cloud, app delivery and digital workspace operations. | ~~$250-$400, depending on registration date~~ | ~~No~~ | ~~September 29 - October 1, 2026~~ |
-| [Security Ninjas Germany 2026 - Munich (Germany)](https://www.secninjas-germany.com/) | Microsoft security community conference at Microsoft Germany HQ with two parallel tracks on identity, endpoint, cloud and detection across the Microsoft security stack. | Not listed | No | October 20, 2026 |
-| [EUCforumDE - Karlsruhe (Germany)](https://www.eucforum.de/22-10-2026-eucforumde-karlsruhe/) | Community evening at Hoepfner Burghof with sessions on Citrix Provisioning Services, an open "Ask Euch Anything" talk and thin and zero clients for VDI and DaaS by 10ZiG. | Free | No | October 22, 2026 |
-| [SwissEUC - Zurich (Switzerland)](https://swisseuc.ch/events/2610) | Community afternoon at Digicomp Academy with sessions on automated Azure Virtual Desktop deployment, AVD landing zones at scale and Windows 365 and AVD in real-world operations. | Free | No | October 27, 2026 |
-| [EUCforumDE - Cologne (Germany)](https://www.eucforum.de/05-11-2026-eucforumde-koeln/) | Community evening with sessions on deploying XenServer at scale with configuration as code and on AI-assisted software creation for non-developers. | Free | No | November 5, 2026 |
-| [Microsoft Ignite 2026 - San Francisco (USA)](https://ignite.microsoft.com/en-US/home) | Microsoft flagship conference for Azure, Windows, Microsoft 365 and security, with expected Windows Cloud, Azure Virtual Desktop and Windows 365 announcements. | Not listed | To be confirmed | November 17-20, 2026 |
-| [E2E EUCDEX.Ai - Nice (France)](https://e2emvc.com/) | Independent EUC conference with 40-50 sessions on server, application, desktop and storage virtualization, preceded by the "Ai in EUC III" master class on April 8. Venue to be announced in November 2026. | 449 EUR super early bird, including the master class | No | April 9-11, 2027 |
-| [SwissEUC - Bern (Switzerland)](https://swisseuc.ch/events) | Community afternoon with a vendor technical session, community talks and a tech talk on EUC technologies. Agenda and registration to be published. | Free | No | May 25, 2027 |
+| ~~[Security Ninjas Germany 2026 - Munich (Germany)](https://www.secninjas-germany.com/)~~ | Microsoft security community conference at Microsoft Germany HQ with two parallel tracks on identity, endpoint, cloud and detection across the Microsoft security stack. | ~~Not listed~~ | ~~No~~ | ~~October 20, 2026~~ |
+| ~~[EUCforumDE - Karlsruhe (Germany)](https://www.eucforum.de/22-10-2026-eucforumde-karlsruhe/)~~ | Community evening at Hoepfner Burghof with sessions on Citrix Provisioning Services, an open "Ask Euch Anything" talk and thin and zero clients for VDI and DaaS by 10ZiG. | ~~Free~~ | ~~No~~ | ~~October 22, 2026~~ |
+| ~~[SwissEUC - Zurich (Switzerland)](https://swisseuc.ch/events/2610)~~ | Community afternoon at Digicomp Academy with sessions on automated Azure Virtual Desktop deployment, AVD landing zones at scale and Windows 365 and AVD in real-world operations. | ~~Free~~ | ~~No~~ | ~~October 27, 2026~~ |
+| ~~[EUCforumDE - Cologne (Germany)](https://www.eucforum.de/05-11-2026-eucforumde-koeln/)~~ | Community evening with sessions on deploying XenServer at scale with configuration as code and on AI-assisted software creation for non-developers. | ~~Free~~ | ~~No~~ | ~~November 5, 2026~~ |
+| [Microsoft Ignite 2026 - San Francisco (USA)](https://ignite.microsoft.com/en-US/home) | Microsoft flagship conference at Moscone Center for Azure, Windows, Microsoft 365 and security, where Windows Cloud, Azure Virtual Desktop and Windows 365 announcements usually land. Optional pre-day on November 16. | Free digital pass; in person $1,625 (Hub only) or $2,325 (conference pass) | Yes, free online event November 17-19 | November 17-20, 2026 |
+| [NerdioCon 2027 - Fort Lauderdale, Florida (USA)](https://nerdiocon.com/) | Nerdio conference at the Signia Diplomat Beach Resort on Azure Virtual Desktop, Windows 365, Intune and cloud endpoint management, with an optional training pre-day on March 15. | $499 early bird until November 30, 2026, then $699; pre-day $99 | No | March 15-17, 2027 |
+| [E2E EUCDEX.Ai - Nice (France)](https://e2emvc.com/) | Independent EUC conference with 40-50 sessions on server, application, desktop and storage virtualization, preceded by the "Ai in EUC III" master class on April 8. Venue not announced yet. | 449 EUR super early bird, including the master class | No | April 9-11, 2027 |
+| [MMS 2027 at MOA - Bloomington, Minnesota (USA)](https://mmsmoa.com/) | Midwest Management Summit at the Radisson Blu with deep technical sessions on Configuration Manager, Intune, Windows and endpoint management. | Not listed | No | May 2-6, 2027 |
+| [SwissEUC - Bern (Switzerland)](https://swisseuc.ch/events) | Community afternoon at Digicomp Academy with a vendor technical session, community talks and a tech talk on EUC technologies. Agenda and registration to be published. | Free | No | May 25, 2027 |
 | [EUCtech Denmark 2027 - Billund (Denmark)](https://euctech.dk) | 10th edition of the Danish EUC conference at LEGOLAND Hotel & Conference, with 40-minute sessions at level 200-500 on cloud infrastructure and DaaS, EUC datacenter operations, security and governance, plus modern workplace management. | Not listed | No | May 26-27, 2027 |
+| [Workplace Ninja Summit 2027 - Baden (Switzerland)](https://summit.wpninjas.global/) | European modern workplace community conference at Trafo Baden covering Intune, Azure Virtual Desktop, Windows 365, Windows 11, Defender and Entra. | Early bird full pass CHF 1,426.57, no hotel included | No | September 20-23, 2027 |
+| [MMS 2027 Music City Edition - Nashville, Tennessee (USA)](https://mmsmoa.com/) | Autumn edition of the Midwest Management Summit at the Grand Hyatt with sessions on Configuration Manager, Intune, Windows and endpoint management. | Not listed | No | October 10-13, 2027 |
+| [SwissEUC - Zurich (Switzerland)](https://swisseuc.ch/events) | Community afternoon at Digicomp Academy with a vendor technical session, community talks and a tech talk on EUC technologies. Agenda and registration to be published. | Free | No | October 19, 2027 |
 
 <!-- AWESOMEAZUREVIRTUALDESKTOP:END -->
 ---
